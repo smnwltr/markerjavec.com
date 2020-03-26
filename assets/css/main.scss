@@ -3,9 +3,10 @@
 
 $primary-color: {{site.data.general.colors.primary}};
 $secondary-color: {{site.data.general.colors.secondary}};
+$marks-blue: {{site.data.general.colors.dark_blue}};
+$marks-teal: {{site.data.general.colors.tealish}};
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 
 * {
   font-family: 'Roboto', Helvetica, sans-serif
@@ -22,12 +23,59 @@ h1,h2,h3,h4 {
   }
 }
 
+.section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
 
+
+#home {
+  height: 100vh;
+  background-color: $marks-blue;
+}
+
+.container-intro {
+  padding: 5rem 2rem;
+}
+
+/* navbar styles */
+.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 125%;
+  transition: 0.7s;
+  &:hover {
+    color: darken(white, 35%);
+    text-decoration: none;
+  }
+}
+
+.nav-btn {
+  color: white;
+  font-weight: bold;
+  background-color: $marks-teal;
+  border-radius: 10px;
+  font-size: 100%;
+  min-width: 120px;
+  padding-top: 0px !important;
+  text-align: center;
+}
+
+.my-navbar-img {
+    height: 80px;
+    width: auto;
+}
+
+/* container backgrounds */
+
+.bg-darkblue {
+  background-color: $marks-blue;
+}
 
 /* button styles  */
 
 .cta-btn {
-  background-color: $secondary-color;
+  background-color: $marks-teal;
   border-radius: 5px;
   box-shadow: 2px 5px 3px #dcdcdc;
   transition: 0.4s box-shadow;
@@ -37,9 +85,21 @@ h1,h2,h3,h4 {
   min-width: 120px;
   font-size: 120%;
   &:hover {
-    box-shadow: 5px 8px 5px #dcdcdc;
+    box-shadow: 4px 8px 4px #dcdcdc;
     text-decoration: none;
     color: white;
   }
 }
 
+
+/* hamburger styles */
+@import 'hamburger';
+.hamburger-inner {
+  background-color: white;
+  &::before {
+    background-color: white;
+  }
+  &::after {
+    background-color: white;
+  }
+}

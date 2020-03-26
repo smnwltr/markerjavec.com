@@ -6,3 +6,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
+
+sass:
+  sass_dir: assets/css/_sass

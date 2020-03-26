@@ -3,3 +3,5 @@ description: >-
 colors:
   primary: "#967274"
   secondary: "#6a9b7d"
+  dark_blue: "#14506f"
+  tealish: "#377687"

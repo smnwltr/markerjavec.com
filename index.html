@@ -2,6 +2,97 @@
 layout: base
 ---
 
-<div class="container">
-    <h1>Hello Mark</h1>
+<div id="home" class="section">
+    <div class="container container-intro bg-light mt-5">
+        <div class="row">
+            <div class="col-md-6 order-first">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/399278244?controls=0"
+                        allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3 text-center">
+                <h1>Maybe a quote</h1>
+            </div>
+        </div>
+        <h5 class="mt-5">Mark Matthew Erjavec..</h5>
+    </div>
+
+    <!-- Short summary about mark (Entrepreneur in Agriculture) -->
+</div>
+
+<div id="about" class="section">
+    <!-- A bit more background, life story, competencies -->
+
+    <div class="container-flex">
+
+    </div>
+</div>
+
+<div id="portfolio" class="section">
+    <div class="container">
+        {% for i in site.data.portfolio.items %}
+        {% assign test = forloop.index|modulo: 2 %}
+        <div class="row mt-5">
+            <div class="col-md-4 sm-6 order-xs-last">
+                <a href="http://{{i.url}}" target="_blank">
+                    <img src="https://via.placeholder.com/400x400" alt="{{i.name}}" class="img-fluid"
+                        style="height: 100%" />
+                </a>
+            </div>
+
+            <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
+                <h2>{{i.name}}</h2>
+                <p class="mt-3">{{i.desc}}</p>
+                <p><a href="http://{{i.url}}" target="_blank">{{i.url}}</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Portfolio (AFO, Mesaba Finance, Blue Heron (?) etc.) -->
+</div>
+
+
+<div id="contact" class="section">
+    <div class="container text-center">
+        <h2>Start a conversation</h2>
+        <form class="mt-5">
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6">
+                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL"
+                        placeholder="Email address *" required>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-3">
+                    <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME"
+                        placeholder="First name (optional)">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME"
+                        placeholder="Last name (optional)">
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6">
+                    <textarea class="form-control" id="contactFormMessage" rows="5"
+                        placeholder="Enter your message here..."></textarea>
+                </div>
+
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                    name="b_13018e2ca32456510d2ff4200_0fd38f8dc7" tabindex="-1" value=""></div>
+
+            <div class="clear mt-4"><input type="submit" value="Send" name="send" id="send-button"
+                    class="cta-btn button">
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Contact container with something like https://mailthis.to/ -->
 </div>
