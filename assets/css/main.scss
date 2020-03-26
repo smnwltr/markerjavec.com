@@ -1,0 +1,45 @@
+---
+---
+
+$primary-color: {{site.data.general.colors.primary}};
+$secondary-color: {{site.data.general.colors.secondary}};
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+* {
+  font-family: 'Roboto', Helvetica, sans-serif
+}
+
+h1,h2,h3,h4 {
+  font-weight: bold;
+}
+
+.main {
+  min-height: 80vh;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+  }
+}
+
+
+
+/* button styles  */
+
+.cta-btn {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  box-shadow: 2px 5px 3px #dcdcdc;
+  transition: 0.4s box-shadow;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  min-width: 120px;
+  font-size: 120%;
+  &:hover {
+    box-shadow: 5px 8px 5px #dcdcdc;
+    text-decoration: none;
+    color: white;
+  }
+}
+
