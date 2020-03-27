@@ -9,7 +9,8 @@ items:
       consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
       magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
        ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: www.mesabafinance.com
+    url: mesabafinance.com
+    img: /assets/img/mf-500.jpg
   -
     name: Agro Fund One
     desc: >-
@@ -20,7 +21,8 @@ items:
       consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
       magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
        ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: www.agrofund.one
+    url: agrofund.one
+    img: /assets/img/afo-500.jpg
   -
     name: Blue Heron
     desc: >-
@@ -31,4 +33,5 @@ items:
       consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
       magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
        ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: www.blueheron.info
+    url: blueheron.info
+    img: /assets/img/bh-500.jpg

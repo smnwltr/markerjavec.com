@@ -1,7 +1,9 @@
 {% assign cache_buster = site.time | date: '%s%N' %}
 
-<div class="flex-container font-weight-bold bg-light">
+<div class="flex-container font-weight-bold bg-light my-footer">
     <div class="container py-5 text-center">
+        <p>{% for i in site.data.portfolio.items %}{% unless forloop.first %} | {% endunless %}<a class="px-1"
+                target="_blank" href="{{i.url}}">{{i.url}}</a>{% endfor %}</p>
         <p>Copyright &copy; Mark Erjavec <span id="currentYear"></span></p>
     </div>
 </div>
