@@ -1,3 +1,5 @@
+{% assign cache_buster = site.time | date: '%s%N' %}
+
 <nav class="navbar navbar-expand-md fixed-top bg-darkblue">
     <a class="navbar-brand smooth-scroll" href="#top">
         <img class="my-navbar-img" src="{{'/assets/img/logo.png' | relative_url }}?{{cache_buster}}"

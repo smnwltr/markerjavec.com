@@ -66,3 +66,19 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
 // Set the offset when entering page with hash present in the url
 window.setTimeout(offsetAnchor, 0);
+
+// read the url to check for contact=sent parameter (contact form)
+$(document).ready(
+    function () {
+        console.log("test");
+        let searchParams = new URLSearchParams(window.location.search);
+        let param = searchParams.get('contact');
+        if (param == 'sent') {
+            console.log("hello");
+            $('#contactForm').addClass('d-none');
+            $('#contactSuccess').removeClass('d-none');
+            $('#contactSuccess').addClass('d-block');
+            $('#contactSuccess').get(0).scrollIntoView();
+        }
+    }
+)

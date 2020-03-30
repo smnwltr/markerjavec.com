@@ -20,25 +20,33 @@ h1,h2,h3,h4 {
 
 .main {
   min-height: 80vh;
-  @media (max-width: 768px) {
-    margin-top: 80px;
+  @media (max-width: 820px) {
+    margin-top: 0px;
   }
 }
 
 #home {
-  min-height: 70vh;
+  min-height: 60vh;
   background-color: $marks-blue;
 }
 
 .container-intro {
   padding: 5rem 2rem;
+  @media (max-width: 820px) {
+    padding: 5rem 1rem;
+  }
 }
 
 /* section styles */
 
 .section {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  @media (max-width: 820px) {
+    margin-top: 0px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 
@@ -67,8 +75,19 @@ h1,h2,h3,h4 {
 }
 
 .my-navbar-img {
-    height: 80px;
+    height: 60px;
     width: auto;
+    @media (max-width: 820px) {
+      height: 50px;
+    }
+
+}
+/* video */
+
+.intro-video {
+  // @media (max-width: 820px) {
+  //   display: none;
+  // }
 }
 
 /* container backgrounds */
@@ -110,7 +129,7 @@ h1,h2,h3,h4 {
 
 .my-footer {
   a {
-    color: black;
+    color: white;
   }
 }
 

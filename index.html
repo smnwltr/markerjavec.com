@@ -1,21 +1,25 @@
 ---
 layout: base
 ---
+{% assign cache_buster = site.time | date: '%s%N' %}
+
+
+<!-- check design at https://getusppe.org/ -->
 
 <div id="home" class="section">
     <div class="container container-intro bg-light mt-5">
         <div class="row">
             <div class="col-md-6 order-first">
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="intro-video embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/399278244?controls=0"
                         allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-md-6 mt-3 text-center">
-                <h1>Maybe a quote</h1>
+            <div class="col-md-6 mt-3 text-center align-self-center">
+                <h1>Mark Matthew Erjavec<br>&mdash;<br>Entrepreneur in Agriculture</h1>
+                <p class="mt-5"><a href="#about" class="btn cta-btn smooth-scroll">More about Mark</a></p>
             </div>
         </div>
-        <h5 class="mt-5">Mark Matthew Erjavec is an Entrepreneur in Agricultur.</h5>
     </div>
 
     <div id="arrow-wrapper">
@@ -38,8 +42,20 @@ layout: base
     <div class="container-flex">
         <div class="container">
             <h2 class="text-center my-2">About Mark</h2>
-        </div>
+            <div class="row mt-5">
+                <div class="col-md-3 sm-6 order-xs-last">
+                    <img src="{{'/assets/img/mark-erjavec-750.jpg'|relative_url}}?{{cache_buster}}" alt="Mark Erjavec"
+                        class="img-fluid" />
+                </div>
 
+                <div class="col-md-9 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %} mt-3">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -74,39 +90,40 @@ layout: base
 </div>
 
 
-<div id="contact" class="section">
+<div id="contact" class="section bg-light">
     <div class="container text-center">
         <h2>Start a conversation</h2>
-        <form id="contactForm" class="mt-5">
+        <form id="contactForm" class="mt-5" action="/index.html?contact=sent" netlify-honeypot="13018e2ca324"
+            method="POST" data-netlify="true">
             <div class="form-group row justify-content-center">
                 <div class="col-sm-6">
-                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL"
+                    <input type="email" value="" name="email" class="email form-control" id="contactFormEmail"
                         placeholder="Email address *" required>
                 </div>
             </div>
 
             <div class="form-group row justify-content-center">
                 <div class="col-sm-3">
-                    <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME"
+                    <input type="text" value="" name="first_name" class="form-control" id="contactFormFirstName"
                         placeholder="First name *" required>
                 </div>
                 <div class="col-sm-3">
-                    <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME"
+                    <input type="text" value="" name="last_name" class="form-control" id="contactFormLastName"
                         placeholder="Last name *" required>
                 </div>
             </div>
 
             <div class="form-group row justify-content-center">
                 <div class="col-sm-6">
-                    <textarea class="form-control" id="contactFormMessage" rows="5"
+                    <textarea class="form-control" name="message" id="contactFormMessage" rows="5"
                         placeholder="Enter your message here..."></textarea>
                 </div>
 
             </div>
 
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_13018e2ca32456510d2ff4200_0fd38f8dc7" tabindex="-1" value=""></div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="13018e2ca324"
+                    tabindex="-1" value=""></div>
 
             <div class="clear mt-4"><input type="submit" value="Send" name="send" id="send-button"
                     class="cta-btn button">
