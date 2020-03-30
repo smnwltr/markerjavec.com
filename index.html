@@ -3,102 +3,127 @@ layout: base
 ---
 {% assign cache_buster = site.time | date: '%s%N' %}
 
-
-<!-- check design at https://getusppe.org/ -->
-
 <div id="home" class="section">
-    <div class="container container-intro bg-light mt-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 order-first">
-                <div class="intro-video embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/399278244?controls=0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
+            <div id="portraitBackground" class="col-md-6 col-sm-6">
+
             </div>
-            <div class="col-md-6 mt-3 text-center align-self-center">
-                <h1>Mark Matthew Erjavec<br>&mdash;<br>Entrepreneur in Agriculture</h1>
-                <p class="mt-5"><a href="#about" class="btn cta-btn smooth-scroll">More about Mark</a></p>
+            <div class="col-md-6 col-sm-6 mt-3 align-self-center text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h1>Mark Matthew Erjavec</h1>
+                        <span style="font-size: 2rem;">&mdash;</span>
+                        <h3 class="">Entrepreneur in Agriculture</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-md-9">
+                                <p class="mt-4" style="line-height: 2rem;">For 25 years, Mark has developed
+                                    unique skills to observe,
+                                    interpret,
+                                    and
+                                    execute decisive
+                                    strategies in agribusiness. His expertise has resulted in over 1000 transactions
+                                    facilitated
+                                    in
+                                    a diverse range of countries, across many commodity types, and targeted end-user
+                                    markets on
+                                    several continents.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="mt-5"><a href="#about" class="btn cta-btn smooth-scroll d-none d-sm-block">More about
+                            Mark</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-
-    <div id="arrow-wrapper">
-        <a class="smooth-scroll" href="#about">
-            <div class="arrow-border">
-
-                <div class="arrow down"></div>
-
-                <div class='pulse'></div>
-            </div>
-        </a>
-    </div>
-
-    <!-- Short summary about mark (Entrepreneur in Agriculture) -->
 </div>
 
-<div id="about" class="section">
+<div id="about" class="section bg-light">
     <!-- A bit more background, life story, competencies -->
 
-    <div class="container-flex">
+    <div class="container-fluid">
         <div class="container">
             <h2 class="text-center my-2"><span class="highlighter">About Mark</span></h2>
-            <div class="row mt-5">
-                <div class="col-md-3 sm-6 order-xs-last">
-                    <img src="{{'/assets/img/mark-erjavec-750.jpg'|relative_url}}?{{cache_buster}}" alt="Mark Erjavec"
-                        class="img-fluid" />
-                </div>
-
-                <div class="col-md-9 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %} mt-3">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+            <!-- <div class="row mt-5 justify-content-center">
+                <img src="{{'/assets/img/mark-erjavec-750.jpg'|relative_url}}?{{cache_buster}}" alt="Mark Erjavec"
+                    class="img-fluid col-md-3" />
+            </div> -->
+            <div class="row justify-content-center mt-3">
+                <div class="col-sm-8 align-self-center mt-3">
+                    <p>For 25 years, Mark has developed unique skills to observe, interpret, and execute decisive
+                        strategies in agribusiness. His expertise has resulted in over 1000 transactions facilitated in
+                        a diverse range of countries, across many commodity types, and targeted end-user markets on
+                        several continents.
+                    </p>
+                    <p>
+                        Today, Mark specializes in funding and developing agribusinesses around the world. The projects
+                        he invest in cover a wide range of technologies, including agricultural drone technology, indoor
+                        farming, and financing of agricultural equipment for farmers across the United States and
+                        Europe.
+                    </p>
                 </div>
             </div>
 
-            <h4 class="mt-5 text-center">Mark at international events</h4>
-            <div class="row mt-3 align-self-center">
-                {% for i in site.data.about.items.photos %}
-                <div class="col-xs-6 col-sm-4 col-md-2 mt-3">
-                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                        data-gallery="mark-erjavec-gallery" data-title="{{i.alt}}">
-                        <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid">
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid bg-darkblue py-5">
+    <div class="container">
+        <h3 class="mt-5 text-center">Mark at international events</h3>
+        <div class="row mt-3 align-self-center mb-5">
+            {% for i in site.data.about.items.photos %}
+            <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
+                    data-gallery="mark-erjavec-gallery" data-title="{{i.alt}}">
+                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </div>
 
 <div id="portfolio" class="section">
     <div class="container">
         <h2 class="text-center my-5"><span class="highlighter">Portfolio</span></h2>
-    </div>
-</div>
-{% for i in site.data.portfolio.items %}
-{% assign test = forloop.index|modulo: 2 %}
-<div class="container-flex py-5 {% if test == 0 %}bg-light{% endif %}">
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-4 sm-6 order-xs-last">
-                <a href="http://{{i.url}}" target="_blank" rel="noopener">
-                    <img src="{{i.img}}" alt="{{i.name}}" class="img-fluid" />
-                </a>
-            </div>
-
-            <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
-                <h3 class="mt-3">{{i.name}}</h3>
-                <p class="mt-3">{{i.desc}}</p>
-                <p><a href="http://{{i.url}}" target="_blank" rel="noopener">{{i.url}}</a></p>
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
     </div>
-</div>
 
-{% endfor %}
+    {% for i in site.data.portfolio.items %}
+    {% assign test = forloop.index|modulo: 2 %}
+    <div class="container-fluid py-5 {% if test == 0 %}bg-light{% endif %}">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4 sm-6 order-xs-last align-self-center">
+                    <a href="http://{{i.url}}" target="_blank" rel="noopener">
+                        <img src="{{i.img}}" alt="{{i.name}}" class="img-fluid" />
+                    </a>
+                </div>
 
-<!-- Portfolio (AFO, Mesaba Finance, Blue Heron (?) etc.) -->
+                <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
+                    <h3 class="mt-3">{{i.name}}</h3>
+                    <p class="mt-3">{{i.desc}}</p>
+                    <p><a href="http://{{i.url}}" target="_blank" rel="noopener">{{i.url}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
 </div>
 
 

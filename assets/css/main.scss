@@ -44,7 +44,22 @@ a {
 
 #home {
   min-height: 60vh;
-  background-color: $marks-blue;
+  padding-top: 85px !important;
+  padding-bottom: 0;
+  @media (max-width: 820px) {
+    padding-top: 75px !important;
+    }
+}
+
+#portraitBackground {
+  background-image: url("/assets/img/mark-erjavec-bg.jpg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  @media (max-width: 820px) {
+    min-height: 50vh;
+  }
 }
 
 .container-intro {
@@ -111,6 +126,11 @@ a {
 
 .bg-darkblue {
   background-color: $marks-blue;
+  color: white;
+  .highlighter {
+    background: linear-gradient(to bottom, transparent 65%, rgba(#dcdcdc, 0.3) 0) center center/10% 75% no-repeat;
+
+  }
 }
 
 /* button styles  */
@@ -134,7 +154,7 @@ a {
 
 .highlighter {
   background: linear-gradient(to bottom, transparent 65%, rgba($marks-blue, 0.25) 0) center center/10% 75% no-repeat;
-  background-size: 100% 80%;
+  background-size: 100% 80% !important;
   padding: .5rem .5rem;
   font-family: 'EB Garamond', serif;
 }

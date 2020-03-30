@@ -1,14 +1,16 @@
 items:
   photos:
     -
-      src: /assets/img/about/mark-erjavec-drone-industry-day-fargo.jpg
-      alt: "Mark Erjavec at Drone Industry Days, Fargo, North Dakota"
-    -
-      src: /assets/img/about/mark-erjavec-djibouti-agro-fund-one.jpg
-      alt: "Mark Erjavec's Agro Fund One development site in Djibouti"
+      video: true
+      src: /assets/img/about/mark-erjavec-rotary-ukraine.png
+      url: https://www.youtube.com/watch?v=8bdIZo5kb8A&t=107
+      alt: "Mark Erjavec in a special thank you video of Rotary Interact Club School 155, Kyiv, Ukraine"
     -
       src: /assets/img/about/mark-erjavec-helicopter-ukraine.jpg
       alt: "Mark Erjavec inspecting a helicotper in Ukraine"
+    -
+      src: /assets/img/about/mark-erjavec-drone-industry-day-fargo.jpg
+      alt: "Mark Erjavec at Drone Industry Days, Fargo, North Dakota"
     -
       src: /assets/img/about/mark-erjavec-yuri-pederii.jpg
       alt: "Mark Erjavec and Yuri Pederii, founder of agricultural drone company AeroDron"
@@ -16,8 +18,5 @@ items:
       src: /assets/img/about/mark-erjavec-agro-biotech-initiative.jpg
       alt: "Mark Erjavec representing the BioTech Initative for the US Ukraine Foundation"
     -
-      video: true
-      src: /assets/img/about/mark-erjavec-rotary-ukraine.png
-      url: https://www.youtube.com/watch?v=8bdIZo5kb8A&t=107
-      alt: "Mark Erjavec in a special thank you video of Rotary Interact Club School 155, Kyiv, Ukraine"
-
+      src: /assets/img/about/mark-erjavec-djibouti-agro-fund-one.jpg
+      alt: "Mark Erjavec's Agro Fund One development site in Djibouti"      
