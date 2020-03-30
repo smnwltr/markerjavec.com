@@ -133,22 +133,6 @@ a {
   }
 }
 
-.nav-btn {
-  background-color: white;
-  border-radius: 4px;
-  border: 5px solid white;
-  min-width: 120px;
-  font-size: 120%;
-  font-weight: bold;
-  color: $marks-blue;
-  padding: 2px 5px;
-  margin: auto;
-  &:hover {
-    text-decoration: none;
-    color: $marks-blue;
-  }
-}
-
 .highlighter {
   background: linear-gradient(to bottom, transparent 65%, rgba($marks-blue, 0.25) 0) center center/10% 75% no-repeat;
   background-size: 100% 80% !important;
@@ -188,5 +172,9 @@ a {
 }
 
 /* ekko lightbox */
-
 @import 'ekko-lightbox';
+.img-lightbox {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}

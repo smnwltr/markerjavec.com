@@ -71,12 +71,12 @@ layout: base
 <div class="container-fluid bg-darkblue py-5">
     <div class="container">
         <h3 class="mt-5 text-center">Mark at International Events</h3>
-        <div class="row mt-3 align-self-center mb-5">
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in site.data.about.items.photos %}
-            <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+            <div class="col-md-4 mt-3">
                 <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
                     data-gallery="mark-erjavec-gallery" data-title="{{i.alt}}">
-                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid">
+                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
                 </a>
             </div>
             {% endfor %}
