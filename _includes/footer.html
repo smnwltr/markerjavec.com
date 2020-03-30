@@ -3,11 +3,13 @@
 <div class="flex-container font-weight-bold bg-darkblue my-footer text-white">
     <div class="container py-5 text-center">
         <p>{% for i in site.data.portfolio.items %}{% unless forloop.first %} | {% endunless %}<a class="px-1"
-                target="_blank" href="//{{i.url}}">{{i.url}}</a>{% endfor %}</p>
+                target="_blank" href="//{{i.url}}" rel="noopener">{{i.url}}</a>{% endfor %}</p>
         <p>Copyright &copy; Mark Erjavec <span id="currentYear"></span></p>
     </div>
 </div>
 
 <script type="text/javascript" src="{{'/assets/js/jquery-3.4.1.min.js' | relative_url}}?{{cache_buster}}"></script>
 <script type="text/javascript" src="{{'/assets/js/bootstrap.min.js' | relative_url}}?{{cache_buster}}" async></script>
+<script type="text/javascript" src="{{'/assets/js/ekko-lightbox.min.js' | relative_url}}?{{cache_buster}}"
+    async></script>
 <script type="text/javascript" src="{{'/assets/js/main.js' | relative_url}}?{{cache_buster}}" async></script>

@@ -70,11 +70,9 @@ window.setTimeout(offsetAnchor, 0);
 // read the url to check for contact=sent parameter (contact form)
 $(document).ready(
     function () {
-        console.log("test");
         let searchParams = new URLSearchParams(window.location.search);
         let param = searchParams.get('contact');
         if (param == 'sent') {
-            console.log("hello");
             $('#contactForm').addClass('d-none');
             $('#contactSuccess').removeClass('d-none');
             $('#contactSuccess').addClass('d-block');
@@ -82,3 +80,9 @@ $(document).ready(
         }
     }
 )
+
+// ekko lightbox
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
