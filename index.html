@@ -133,18 +133,18 @@ layout: base
 
         <div class="container">
             <h3 class="text-center my-4">{{personal.quotes.heading}}</h3>
-            <div class="row justify-content-center mt-3">
+            <div class="justify-content-center mt-3">
                 {% for i in personal.quotes.items %}
-                <div class="col-sm-8 align-self-center mt-3">
-                    <blockquote class="">
-                        <h4 class="mb-0">{{i.heading}}</h4>
-                        <p class="text-muted mt-0 mb-2">&mdash; {{i.author}}</p>
-                        <p><em>{{i.content | newline_to_br}}</em></p>
-                        <p class="mt-3">{{i.comment}}</em></p>
-                    </blockquote>
+                <div class="mt-5">
+                    <h4 class="mb-0">{{i.heading}}</h4>
+                    <p class="text-muted mt-0 mb-2">&mdash; {{i.author}}</p>
+                    <div class="quote-box">
+                        <p class="fade-out"><em>{{i.content | newline_to_br}}</em></p>
+                    </div>
+                    <p><a href="" class="read-more">Full text</a></p>
+                    <p><a href="" class="read-less d-none mt-1">Close</a></p>
                 </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>

@@ -86,3 +86,62 @@ $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();
     $(this).ekkoLightbox();
 });
+
+
+
+// fade in out of quote boxes
+
+let $el, $ps, $up, $cl, totalHeight;
+
+$(".read-more").click(function () {
+
+    totalHeight = 0
+
+    $el = $(this);
+    $p = $el.parent();
+    $up = $el.parent().parent().find('.quote-box');
+    $ps = $up.find('.fade-out')
+    $cl = $p.parent().find('.read-less');
+
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function () {
+        totalHeight += $(this).outerHeight();
+    });
+
+    $up
+        .css({
+            // Set height to prevent instant jumpdown when max height is removed
+            "height": $up.height(),
+            "max-height": 9999,
+            "-webkit-mask-image": "none",
+            "mask-image": "none"
+        })
+        .animate({
+            "height": totalHeight
+        });
+
+    $p.addClass('d-none');
+    $cl.addClass('d-block');
+    // prevent jump-down
+    return false;
+
+});
+
+// reverse changes and collapse text box again
+$(".read-less").click(function () {
+    $up
+        .css({
+            "height": "80px",
+            "-webkit-mask-image": "linear-gradient(to bottom, black 20%, transparent 100%)",
+            "mask-image": "linear-gradient(to bottom, black 20%, transparent 100%)",
+
+        })
+        .animate({
+            "height": "80px",
+        });
+    $(this).removeClass('d-block')
+    $(this).parent().parent().find('.read-more').parent().removeClass('d-none');
+
+    return false;
+
+})

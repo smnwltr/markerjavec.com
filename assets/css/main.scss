@@ -203,3 +203,13 @@ a {
     }
   }
 }
+
+
+/* quote styles */
+.quote-box {
+  max-height: 80px;
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+}
