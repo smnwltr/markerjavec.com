@@ -1,10 +1,7 @@
 ---
 ---
 
-$primary-color: {{site.data.general.colors.primary}};
-$secondary-color: {{site.data.general.colors.secondary}};
-$marks-blue: {{site.data.general.colors.dark_blue}};
-$marks-teal: {{site.data.general.colors.tealish}};
+$marks-blue: {{site.data.general.items.colors.dark_blue}};
 
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap');
@@ -24,6 +21,11 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 1.25rem;
 }
 
 a {
@@ -175,6 +177,29 @@ a {
 @import 'ekko-lightbox';
 .img-lightbox {
   width: 100%;
-  height: 300px;
+  height: 150px;
   object-fit: cover;
+  transition: all .5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.linkedin {
+  height: 80px;
+  path {
+    fill: $marks-blue;
+    transition: fill 1s;
+    &:hover {
+      fill: darken($marks-blue, 5%);
+    }
+  }
+}
+
+.my-footer {
+  .linkedin {
+    path {
+      fill: white;
+    }
+  }
 }

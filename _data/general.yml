@@ -1,7 +1,14 @@
-description: >-
-  Mark Erjavec is an entreprenuer in agriculture.
-colors:
-  primary: "#967274"
-  secondary: "#6a9b7d"
-  dark_blue: "#14506f"
-  tealish: "#377687"
+items:
+  description: >-
+    Mark Erjavec is an entreprenuer in agriculture.
+  colors:
+    dark_blue: "#14506f"
+  heading: Mark Matthew Erjavec
+  subheading: Entrepreneur in Agriculture
+  boilerplate: >-
+    For 25 years, Mark has developed unique skills to observe, interpret, 
+    and execute decisive strategies in agribusiness. His expertise has 
+    resulted in over 1000 transactions facilitated in a diverse range of 
+    countries, across many commodity types, and targeted end-user markets 
+    on several continents.
+  button: More about Mark

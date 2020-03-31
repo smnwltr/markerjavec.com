@@ -1,37 +1,23 @@
 items:
-  -
-    name: Mesaba Finance
-    desc: >-
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-      no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-      consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-       ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: mesabafinance.com
-    img: /assets/img/mf-500.jpg
-  -
-    name: Agro Fund One
-    desc: >-
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-      no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-      consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-       ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: agrofund.one
-    img: /assets/img/afo-500.jpg
-  -
-    name: Blue Heron
-    desc: >-
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-      no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-      consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-      magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-       ea rebum. Stet clita kasd gubergren, no sea takimata est Lorem ipsum dolor sit amet.
-    url: blueheron.info
-    img: /assets/img/bh-500.jpg
+  heading: Business Portfolio
+  paragraphs: >-
+    TODO
+  items:
+    -
+      name: Mesaba Finance
+      desc: >-
+        TODO
+      url: mesabafinance.com
+      img: /assets/img/mf-500.jpg
+    -
+      name: Agro Fund One
+      desc: >-
+        TODO
+      url: agrofund.one
+      img: /assets/img/afo-500.jpg
+    -
+      name: Blue Heron
+      desc: >-
+        TODO
+      url: blueheron.info
+      img: /assets/img/bh-500.jpg

@@ -1,13 +1,23 @@
 items:
+  heading: About Mark
+  paragraphs:
+    - >-
+      As a young entrepreneur I honed my skills as a salesman and capital raiser working 
+      with a variety of individual entrepreneurs at a time when utilizing leverage in 
+      real estate was a growing trend. In the late 1990s, I capitalized on my experience 
+      and relationships that I had earned with successful entrepreneurs to operate 
+      proprietary investment funds and a small investment banking practice.
+    - >-
+      A staff hire I made in the early 2001 introduced me to my first international individual 
+      investor, and since then I have developed relationships with approximately 50 high and 
+      ultra-high net worth individual investors from around the world.
+    - >-
+      Today, I specialize in funding and developing agribusinesses around the world. 
+      The projects I invest in cover a wide range of technologies, including agricultural 
+      drone technology, indoor farming, and financing of agricultural equipment for farmers 
+      across the United States and Europe.
+
   photos:
-    -
-      video: true
-      src: /assets/img/about/mark-erjavec-rotary-ukraine.png
-      url: https://www.youtube.com/watch?v=8bdIZo5kb8A&t=107
-      alt: "Mark Erjavec in a special thank you video of Rotary Interact Club School 155, Kyiv, Ukraine"
-    -
-      src: /assets/img/about/mark-erjavec-helicopter-ukraine.jpg
-      alt: "Mark Erjavec inspecting a helicotper in Ukraine"
     -
       src: /assets/img/about/mark-erjavec-drone-industry-day-fargo.jpg
       alt: "Mark Erjavec at Drone Industry Days, Fargo, North Dakota"

@@ -1,10 +1,16 @@
 items:
   -
-    name: About Mark
+    name: About
     url: "#about"
-  -
+  - 
     name: Portfolio
     url: "#portfolio"
+  -
+    name: Personal
+    url: "#personal"
+  -
+    name: Philantropy
+    url: "#philantropy"
   -
     name: Contact
     url: "#contact"
