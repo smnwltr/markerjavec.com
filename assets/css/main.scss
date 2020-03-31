@@ -186,7 +186,7 @@ a {
 }
 
 .linkedin {
-  height: 80px;
+  height: 50px;
   path {
     fill: $marks-blue;
     transition: fill 1s;
@@ -212,4 +212,14 @@ a {
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+}
+
+
+
+/* hide things from display in forms but keep for screen readers */
+
+.form-hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }

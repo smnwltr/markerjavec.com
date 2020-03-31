@@ -57,8 +57,7 @@ items:
       -
         heading: Man in the Arena
         author: Thedore Roosevelt
-        comment: >-
-
+        comment: 
         content: |
           It is not the critic who counts; 
           not the man who points out how the strong man stumbles, 
@@ -75,9 +74,7 @@ items:
           so that his place shall never be with those cold and 
           timid souls who neither know victory nor defeat.
           
-
-
-  galleryHeading: "Selection of Favorite Paintings"
+  galleryHeading: "Favorite Paintings Gallery"
   photos:
     - 
       src: /assets/img/personal/renoir.jpg
