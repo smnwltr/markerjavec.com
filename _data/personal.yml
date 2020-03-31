@@ -2,9 +2,15 @@ items:
   heading: Personal Interests
   paragraphs:
     - >-
-      TODO
+      Besides my business pursuits, I have a strong interest in fine arts. I draw inspiration 
+      for my personal live from poems and speeches by great writers and speakers. My 
+      favorite texts include Horatius at the Bridge, Indecision, and Man in the Arena, which are listed below.
+      Another area of particular interest is paintings, specifically oil paintings. Below you will find a 
+      gallery of my favorite paintings, from both American and Russian painters, 
+      which I have viewed in person frequently. The gallery contains 
+      additional commentary for each painting.
   quotes:
-    heading: Inspirational Quotes and Speeches
+    heading: Inspirational Poems and Speeches
     items:
       -
         heading: Horatius at the Bridge

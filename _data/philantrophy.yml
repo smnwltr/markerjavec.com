@@ -1,0 +1,39 @@
+items:
+  heading: Philantrophy
+  paragraphs:
+    - >-
+      One of my principal philantrophic activities is supporting local Rotary Clubs. 
+      I have closely accompanied the foundation of 
+      <a href="https://my.rotary.org/en/club-profile/431D981E-4EC9-4800-955D-6D32DCB29B91" 
+      target="_blank">Kyiv Multinational Rotary Club</a>, which 
+      received its charter on June 12, 2006 from the President of Rotary International, 
+      Carl Whilhem Stenhammer in a ceremony at the President Hotel in Kyiv The humanitarian 
+      focus of KMRC is to help the weakest citizens of Ukraine. Right from the start, we have 
+      executed important projects such as putting incubators in regional hospitals, purchasing 
+      an important ultrasound scanner for an all-Ukraine hospital for lesions to the central 
+      nervous system, training doctors in cleft operations, establishing a patients organisation 
+      for cerebral palsy and putting computers in 59 schools around the front-line in the east.
+
+  galleryHeading: Philantrophy Gallery    
+  photos:
+    -
+      src: /assets/img/philantrophy/mark-erjavec-gora-spring-cleanup.jpg
+      alt: "Mark Erjavec at the Spring Cleanup in Gora, Ukraine"
+    -
+      src: /assets/img/philantrophy/mark-erjavec-rotary-pin-reception.png
+      alt: "Mark Erjavec receiving a Rotary Pin"
+    -
+      video: true
+      src: /assets/img/philantrophy/mark-erjavec-rotary-ukraine.png
+      url: https://www.youtube.com/watch?v=8bdIZo5kb8A&t=107
+      alt: "Mark Erjavec in a special thank you video of Rotary Interact Club School 155, Kyiv, Ukraine"
+    -
+      src: /assets/img/philantrophy/mark-erjavec-rotary-las-vegas-nv.png
+      alt: "Mark Erjavec with the Las Vegas Rotary Club, Nevada"
+    -
+      src: /assets/img/philantrophy/mark-erjavec-rotary-minneapolis-mn.jpg
+      alt: "Mark Erjavec with the Minneapolis Rotary Club, Minnesota"
+    -
+      src: /assets/img/philantrophy/mark-erjavec-rotary-deerfield-il.jpg
+      alt: "Mark Erjavec with the Deerfield Rotary Club, Illionois"
+

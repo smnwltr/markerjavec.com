@@ -19,7 +19,7 @@ layout: base
                         <h3 class="">{{home.subheading}}</h3>
                         {% endif %}
                         <div class="row justify-content-center">
-                            <div class="col-md-9">
+                            <div class="col-md-12">
                                 <p class="mt-4" style="line-height: 2rem;">{{home.boilerplate}}
                                 </p>
                             </div>
@@ -49,7 +49,7 @@ layout: base
             <div class="row justify-content-center mt-3">
                 <div class="col-sm-8 align-self-center mt-3">
                     {% for i in about.paragraphs %}
-                    <p>{{i}}</p>
+                    <p class="section-intro">{{i}}</p>
                     {% endfor %}
                 </div>
             </div>
@@ -82,12 +82,10 @@ layout: base
     <div class="container">
         <h2 class="text-center my-5"><span class="highlighter">{{portfolio.heading}}</span></h2>
         <div class="row justify-content-center">
-            <div class="col-sm-8">
-                <div class="col-sm-8 align-self-center mt-3">
-                    {% for i in portfolio.paragraphs %}
-                    <p>{{i}}</p>
-                    {% endfor %}
-                </div>
+            <div class="col-sm-8 align-self-center mt-3">
+                {% for i in portfolio.paragraphs %}
+                <p class="section-intro">{{i}}</p>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -124,7 +122,7 @@ layout: base
             <div class="row justify-content-center mt-3">
                 <div class="col-sm-8 align-self-center mt-3">
                     {% for i in personal.paragraphs %}
-                    <p>{{i}}</p>
+                    <p class="section-intro">{{i}}</p>
                     {% endfor %}
                 </div>
             </div>
@@ -140,7 +138,7 @@ layout: base
                     <div class="quote-box">
                         <p class="fade-out"><em>{{i.content | newline_to_br}}</em></p>
                     </div>
-                    <p><a href="" class="read-more">Full text</a></p>
+                    <p><a href="" class="read-more">Read more</a></p>
                     <p><a href="" class="read-less d-none mt-1">Close</a></p>
                 </div>
                 {% endfor %}
@@ -167,23 +165,23 @@ layout: base
 
 </div>
 
-<!-- philantropy section -->
-{% assign phil = site.data.philantropy.items %}
-<div id="philantropy" class="section">
+<!-- philantrophy section -->
+{% assign phil = site.data.philantrophy.items %}
+<div id="philantrophy" class="section">
     <div class="container-fluid">
         <div class="container">
             <h2 class="text-center my-2"><span class="highlighter">{{phil.heading}}</span></h2>
             <div class="row justify-content-center mt-3">
                 <div class="col-sm-8 align-self-center mt-3">
                     {% for i in phil.paragraphs %}
-                    <p>{{i}}</p>
+                    <p class="section-intro">{{i}}</p>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- philantropy gallery -->
+<!-- philantrophy gallery -->
 <div class="container-fluid bg-darkblue py-5">
     <div class="container">
         <h4 class="text-center">{{phil.galleryHeading}}</h4>
@@ -191,7 +189,7 @@ layout: base
             {% for i in phil.photos %}
             <div class="col-md-2 mt-3">
                 <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                    data-gallery="philantropy-gallery" data-title="{{i.alt}}">
+                    data-gallery="philantrophy-gallery" data-title="{{i.alt}}">
                     <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
                 </a>
             </div>
