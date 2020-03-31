@@ -1,7 +1,8 @@
 items:
   heading: Business Portfolio
   paragraphs: >-
-    Today, I specialize in funding and developing agribusinesses around the world. 
+    Today I manage Mesaba Finance, an investment fund for high-net-worth individuals.
+    Besides, I specialize in funding and developing agribusinesses around the world. 
     The projects I invest in cover a wide range of technologies, including agricultural 
     drone technology, indoor farming, and financing of agricultural equipment for farmers 
     across the United States and Europe.
@@ -9,7 +10,7 @@ items:
     -
       name: Mesaba Finance
       desc: >-
-        Today, Mesaba Finance is a third party investment fund management company serving 
+        Mesaba Finance is now a third party investment fund management company serving 
         international family office customers. The company traces its roots back to 1938,
          when it was formed as Mesaba Loan Company by Maurice "Mosey" Banen in Minnesota. 
          I acquired the company in 1994, when it was a Regulated Lender in the State of 
@@ -21,7 +22,7 @@ items:
       desc: >-
         Agro Fund One is an agricultural investment fund deploying capital into growth-stage 
         companies in the international agricultural sector. Projects include investments across
-        the globe, including North and South America, Europe, and Africa. The investemt scope 
+        the globe, for example in North and South America, Europe, and Africa. The investemt scope 
         covers a broad range of technologies and markets that support Agro Fund One's mission to
         enable agricultural entrepreneurs around the globe. 
       url: agrofund.one
