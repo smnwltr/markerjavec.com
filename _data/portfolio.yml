@@ -1,39 +1,42 @@
 items:
   heading: Business Portfolio
   paragraphs: >-
-    Today I manage Mesaba Finance, an investment fund for high-net-worth individuals.
-    Besides, I specialize in funding and developing agribusinesses around the world. 
-    The projects I invest in cover a wide range of technologies, including agricultural 
-    drone technology, indoor farming, and financing of agricultural equipment for farmers 
-    across the United States and Europe.
+    Today, operating for the United States, I serve as the Chairperson and a key strategist of 
+    Mesaba Finance Company, Incorporated, the company that I first purchased in 1994, at age 18, 
+    three days after graduating from Eveleth/Gilbert High school in Minnesota.
   items:
     -
       name: Mesaba Finance
-      desc: >-
-        Mesaba Finance is now a third party investment fund management company serving 
-        international family office customers. The company traces its roots back to 1938,
-         when it was formed as Mesaba Loan Company by Maurice "Mosey" Banen in Minnesota. 
-         I acquired the company in 1994, when it was a Regulated Lender in the State of 
-         Minnesota, specialized in automobile and secured consumer financing.
+      desc: >
+        Mesaba Finance, through its various affiliated companies support a boutique investment 
+        banking operation and we employ a professional staff to manage funds related to 
+        Agricultural and other specialty finance in North, Central and South America, 
+        as well as a project in the Horn of Africa.<br><br>
+        Mesaba Finance traces its roots back to 1938, when it was formed as Mesaba Loan Company 
+        by Maurice "Mosey" Banen in Minnesota. I acquired the company in 1994, when it was a 
+        Regulated Lender in the State of Minnesota, specialized in automobile and secured consumer 
+        financing. As a boutique investment bank, we serve a niche clientele controlled by foreign 
+        owner and sovereign nation clientele
       url: mesabafinance.com
       img: /assets/img/mf-500.jpg
     -
       name: Agro Fund One
       desc: >-
-        Agro Fund One is an agricultural investment fund deploying capital into growth-stage 
-        companies in the international agricultural sector. Projects include investments across
-        the globe, for example in North and South America, Europe, and Africa. The investemt scope 
-        covers a broad range of technologies and markets that support Agro Fund One's mission to
-        enable agricultural entrepreneurs around the globe. 
+        Agro Fund One, and our subsidiaries draw from the expertise of our international 
+        staff and resources from our affiliated businesses to support growth-stage companies 
+        in the international agricultural sector. Projects focus on North and South America 
+        and a stand-alone project in the Horn of Africa in a wide range of sectors ranging 
+        from crop inputs, logistics, processing, growing and ag tech innovations. 
       url: agrofund.one
       img: /assets/img/afo-500.jpg
     -
       name: Blue Heron Farms
       desc: >-
-        Blue Heron Farms is a multi-national managed farm operation in the Republic of Georgia,
-        located in the ancient wine-growing region of Kakheti. We actively manage almost 2000 
-        hectares of farm-land in the Republic of Georgia. Our properties produce a wide variety 
-        of row crops, orchard crops, and specialty foods. Blue Heron has cultivated strong export 
-        relationships across all of these categories for sale in many different markets.
+        Blue Heron Farms is a multi-national managed farm operation in Eastern Europe. 
+        Our journey started in 2011 in the ancient wine-growing region of Kakheti, in the 
+        Republic of Georgia. Actively managing 1500 hectares of farm-land, these properties 
+        produce a wide variety of row crops, orchard crops, and specialty foods. Blue Heron 
+        team developed and continues to support strong export relationships across all of 
+        these categories for sale in many different markets and a specialty equipment leasing portfolio.
       url: blueheron.info
       img: /assets/img/bh-500.jpg
