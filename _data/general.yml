@@ -12,3 +12,14 @@ items:
     countries, across many commodity types, and targeted end-user markets 
     on several continents.
   button: More about Mark
+  carousel:
+    -
+      url: /assets/img/portraits/mark1.jpg
+    -
+      url: /assets/img/portraits/mark2.jpg
+    -
+      url: /assets/img/portraits/mark3.jpg
+    -
+      url: /assets/img/portraits/mark4.jpg
+    -
+      url: /assets/img/portraits/mark5.jpg

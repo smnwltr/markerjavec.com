@@ -1,0 +1,276 @@
+---
+layout: base
+permalink: /portraits/index.html
+---
+{% assign cache_buster = site.time | date: '%s%N' %}
+
+<!-- home section (top of page)-->
+{% assign home = site.data.general.items %}
+<div id="home" class="section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6" style="padding-left:0;padding-right: 0">
+
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+
+                        {% for i in home.carousel %}
+                        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                            <img class="d-block w-100" src="{{i.url|relative_url}}" alt="Mark Erjavec">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4>Option {{forloop.index}}</h4>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 mt-3 align-self-center text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h1>{{home.heading}}</h1>
+                        {% if home.subheading %}
+                        <span style="font-size: 2rem;">&mdash;</span>
+                        <h3 class="">{{home.subheading}}</h3>
+                        {% endif %}
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <p class="mt-4" style="line-height: 2rem;">{{home.boilerplate}}
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="mt-5"><a href="#about"
+                            class="btn cta-btn smooth-scroll d-none d-sm-block">{{home.button}}</a>
+                    </p>
+                </div>
+                <a class="mt-5" href="https://www.linkedin.com/in/markerjavec/" rel="noopener" target="_blank">
+                    <img src="{{'/assets/img/linkedin.png'|relative_url}}" class="linkedin"
+                        alt="Marc Erjavec's LinkedIn profile">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- about mark section (professional background)-->
+{% assign about = site.data.about.items %}
+<div id="about" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center my-2"><span class="highlighter">{{about.heading}}</span></h2>
+        <div class="row justify-content-center mt-3">
+            <div class="col-sm-8 align-self-center mt-3">
+                {% for i in about.paragraphs %}
+                <p class="section-intro">{{i}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- event gallery -->
+<div class="section bg-darkblue py-5">
+    <div class="container">
+        <h4 class="text-center">{{about.galleryHeading}}</h4>
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
+            {% for i in about.photos %}
+            <div class="col-md-3 mt-3">
+                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
+                    data-gallery="event-gallery" data-title="{{i.alt}}">
+                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+
+<!-- portfolio section (business holdings and investments) -->
+{% assign portfolio = site.data.portfolio.items %}
+<div id="portfolio" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center my-2"><span class="highlighter">{{portfolio.heading}}</span></h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-8 align-self-center mt-3">
+                {% for i in portfolio.paragraphs %}
+                <p class="section-intro">{{i}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% for i in portfolio.items %}
+    {% assign test = forloop.index|modulo: 2 %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 sm-6 order-xs-last align-self-center">
+                <a href="http://{{i.url}}" target="_blank" rel="noopener">
+                    <img src="{{i.img}}" alt="{{i.name}}" class="img-fluid" />
+                </a>
+            </div>
+
+            <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
+                <h3 class="mt-3">{{i.name}}</h3>
+                <p class="mt-3">{{i.desc}}</p>
+                <p><a href="http://{{i.url}}" target="_blank" rel="noopener">{{i.url}}</a></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<!-- personal section (personal background) -->
+{% assign personal = site.data.personal.items %}
+<div id="personal" class="section">
+    <div class="container">
+        <h2 class="text-center my-2"><span class="highlighter">{{personal.heading}}</span></h2>
+        <div class="row justify-content-center mt-3">
+            <div class="col-sm-8 align-self-center mt-3">
+                {% for i in personal.paragraphs %}
+                <p class="section-intro">{{i}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="text-center my-4">{{personal.quotes.heading}}</h3>
+        <div class="row justify-content-center mt-3">
+            {% for i in personal.quotes.items %}
+            <div class="col-sm-8 mt-3">
+                <h4 class="mb-0">{{i.heading}}</h4>
+                <p class="text-muted mt-0 mb-2">&mdash; {{i.author}}</p>
+                <div class="quote-box">
+                    <p class="fade-out"><em>{{i.content | newline_to_br}}</em></p>
+                </div>
+                <p><a href="" class="read-more">Read more</a></p>
+                <p><a href="" class="read-less d-none mt-1">Close</a></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- personal gallery -->
+<div class="section bg-darkblue py-5">
+    <div class="container">
+        <h4 class="text-center">{{personal.galleryHeading}}</h4>
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
+            {% for i in personal.photos %}
+            <div class="col-md-4 mt-3">
+                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
+                    data-gallery="personal-gallery" data-title="{{i.alt}}" data-footer="{{i.footer}}">
+                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid img-lightbox" style="height: 250px;">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+
+<!-- philantrophy section -->
+{% assign phil = site.data.philantrophy.items %}
+<div id="philantrophy" class="section">
+    <div class="container">
+        <h2 class="text-center my-2"><span class="highlighter">{{phil.heading}}</span></h2>
+        <div class="row justify-content-center mt-3">
+            <div class="col-sm-8 align-self-center mt-3">
+                {% for i in phil.paragraphs %}
+                <p class="section-intro">{{i}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- philantrophy gallery -->
+<div class="section bg-darkblue py-5">
+    <div class="container">
+        <h4 class="text-center">{{phil.galleryHeading}}</h4>
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
+            {% for i in phil.photos %}
+            <div class="col-md-2 mt-3">
+                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
+                    data-gallery="philantrophy-gallery" data-title="{{i.alt}}">
+                    <img src="{{i.src}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<!-- contact section -->
+<div id="contact" class="section bg-light">
+    <div class="container text-center py-5">
+        <h2><span class="highlighter">Start a conversation</span></h2>
+        <form id="contactForm" class="mt-5" action="/index.html?contact=sent" netlify-honeypot="13018e2ca324"
+            method="POST" data-netlify="true">
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6 mb-2">
+                    <input type="email" value="" name="email" class="email form-control" id="contactFormEmail"
+                        placeholder="Email address *" required>
+                    <label class="form-hide" for="contactFormEmail">Email address</label>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-3 mb-2">
+                    <input type="text" value="" name="first_name" class="form-control" id="contactFormFirstName"
+                        placeholder="First name *" required>
+                    <label class="form-hide" for="contactFormFirstName">First name</label>
+
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" value="" name="last_name" class="form-control" id="contactFormLastName"
+                        placeholder="Last name *" required>
+                    <label class="form-hide" for="contactFormLastName">Last name</label>
+
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6">
+                    <textarea class="form-control" name="message" id="contactFormMessage" rows="5"
+                        placeholder="Enter your message here..."></textarea>
+                    <label class="form-hide" for="contactFormMessage">Email address</label>
+                </div>
+
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div class="form-hide" aria-hidden="true"><input type="text" name="13018e2ca324" tabindex="-1" value="">
+            </div>
+
+            <div class="clear mt-4"><input type="submit" value="Send" name="send" id="send-button"
+                    class="cta-btn button">
+            </div>
+        </form>
+
+        <div id="contactSuccess" class="row justify-content-center mt-5 d-none">
+            <div class col-sm-6>
+                <h5>Thank you for your message. We will be in touch shortly.</h5>
+            </div>
+
+        </div>
+    </div>
+
+</div>

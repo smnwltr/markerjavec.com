@@ -62,6 +62,16 @@ a {
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
+  // overflow: hidden;
+  min-height: 100vh;
+  @media (max-width: 820px) {
+    min-height: 50vh;
+  }
+}
+
+.portrait-img {
+  object-fit: cover;
+  object-position: right top;
   min-height: 100vh;
   @media (max-width: 820px) {
     min-height: 50vh;
