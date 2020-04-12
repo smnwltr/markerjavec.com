@@ -1,10 +1,27 @@
 items:
   description: >-
     Mark Erjavec is an entreprenuer in agriculture.
-  colors:
-    dark_blue: "#14506f"
   heading: Mark Matthew Erjavec
   subheading: Entrepreneur in Agriculture
+  skills:
+    -
+      text: Skill 1
+      icon: /assets/img/skills/risk.png
+    -
+      text: Skill 2
+      icon: /assets/img/skills/plant.png
+    -
+      text: Skill 3
+      icon: /assets/img/skills/risk.png
+    -
+      text: Skill 4
+      icon: /assets/img/skills/plant.png
+    -
+      text: Skill 5
+      icon: /assets/img/skills/risk.png
+    -
+      text: Skill 6
+      icon: /assets/img/skills/plant.png
   boilerplate: >-
     For 25 years, Mark has developed unique skills to observe, interpret, 
     and execute decisive strategies in agribusiness. His expertise has 
@@ -12,16 +29,22 @@ items:
     countries, across many commodity types, and targeted end-user markets 
     on several continents.
   button: More about Mark
-  carousel:
+  circle: /assets/img/mark-erjavec-circle.jpg
+  facts:
     -
-      url: /assets/img/portraits/mark1.jpg
+      text: Fact 1
+      counter: 300+
+      background: /assets/img/facts/money.png
     -
-      url: /assets/img/portraits/mark2.jpg
+      text: Fact 2
+      counter: 100
+      background: /assets/img/facts/money.png
     -
-      url: /assets/img/portraits/mark3.jpg
+      text: Fact 3
+      counter: 50
+      background: /assets/img/facts/money.png
     -
-      url: /assets/img/portraits/mark4.jpg
-    -
-      url: /assets/img/portraits/mark5.jpg
-    -
-      url: /assets/img/portraits/mark6.jpg  
+      text: Fact 4
+      counter: 3000
+      background: /assets/img/facts/money.png
+

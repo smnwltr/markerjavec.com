@@ -1,18 +1,21 @@
 ---
 ---
 
-$marks-blue: {{site.data.general.items.colors.dark_blue}};
+$primary-color: #283349;
+$secondary-color: #f6aa32;
+$theme-font: 'Roboto', Helvetica, sans-serif;
+$circle-size: 75px;
+$skill-size: 100px;
 
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap');
 
 * {
-  font-family: 'Roboto', Helvetica, sans-serif
+  font-family: $theme-font;
 }
 
 h1,h2,h3,h4 {
   font-weight: bold;
-  font-family: 'EB Garamond', serif;
 }
 
 h2 {
@@ -24,7 +27,6 @@ h3 {
 }
 
 h4 {
-  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 1.25rem;
 }
 
@@ -33,50 +35,33 @@ p {
 }
 
 a {
-  color: $marks-blue;
+  color: black;
   font-weight: bold;
 
   &:hover{
-    color: darken($marks-blue, 20%)
+    color: lighten(black, 20%)
   }
 }
 
 .main {
   min-height: 80vh;
-  @media (max-width: 820px) {
-    margin-top: 0px;
-  }
 }
 
 #home {
-  min-height: 60vh;
+  height: 70vh;
   padding-top: 85px !important;
   padding-bottom: 0;
-  @media (max-width: 820px) {
-    padding-top: 75px !important;
-    }
-}
-
-#portraitBackground {
   background-image: url("/assets/img/mark-erjavec-bg.jpg");
-  background-position: right top;
+  background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
-  // overflow: hidden;
-  min-height: 100vh;
+
   @media (max-width: 820px) {
-    min-height: 50vh;
+    margin-top: 80px !important;
+    background-position: 30% top;
   }
 }
 
-.portrait-img {
-  object-fit: cover;
-  object-position: right top;
-  min-height: 100vh;
-  @media (max-width: 820px) {
-    min-height: 50vh;
-  }
-}
 
 .container-intro {
   padding: 5rem 2rem;
@@ -90,11 +75,11 @@ a {
 .section {
   @media (max-width: 820px) {
     margin-top: 0px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .section-intro {
@@ -103,14 +88,16 @@ a {
 
 /* navbar styles */
 .nav-link {
-  color: white;
-  font-family: 'EB Garamond', serif;
+  font-family: $theme-font;
   font-weight: bold;
   font-size: 125%;
   transition: 0.7s;
   &:hover {
-    color: darken(white, 35%);
+    color: darken(white, 50%);
     text-decoration: none;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    font-size: 100%;
   }
 }
 
@@ -123,10 +110,24 @@ a {
 
 }
 
+.navbar-scroll {
+  box-shadow: 0 2px 10px 0 rgba(86, 91, 115, 0.15);
+  background-color: white;
+  text-shadow: none;
+  transition: background-color .3s;
+}
+
+.navbar {
+  @media (max-width: 820px) {
+    background-color: white;;
+  }
+
+}
+
 /* container backgrounds */
 
 .bg-darkblue {
-  background-color: $marks-blue;
+  background-color: $primary-color;
   color: white;
   .highlighter {
     background: linear-gradient(to bottom, transparent 65%, rgba(#dcdcdc, 0.3) 0) center center/10% 75% no-repeat;
@@ -139,8 +140,8 @@ a {
 .cta-btn {
   background-color: white;
   border-radius: 4px;
-  border: 5px solid $marks-blue;
-  color: $marks-blue;
+  border: 5px solid $primary-color;
+  color: $primary-color;
   min-width: 120px;
   font-size: 120%;
   font-weight: bold;
@@ -148,15 +149,70 @@ a {
   &:hover {
     box-shadow: 4px 8px 4px #dcdcdc;
     text-decoration: none;
-    color: $marks-blue;
+    color: $primary-color;
   }
 }
 
 .highlighter {
-  background: linear-gradient(to bottom, transparent 65%, rgba($marks-blue, 0.25) 0) center center/10% 75% no-repeat;
+  background: linear-gradient(to bottom, transparent 65%, rgba($secondary-color, 0.80secti) 0) center center/10% 75% no-repeat;
   background-size: 100% 80% !important;
   padding: .5rem .5rem;
-  font-family: 'EB Garamond', serif;
+  font-family: $theme-font;
+}
+
+.circle-image {
+  border: 5px solid $secondary-color;
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+
+/* fact cards */
+
+.fact-card {
+  color: black;
+  box-shadow: 0 4px 8px 0 lightslategrey;
+
+  .fact-circle {
+    content: "";
+    height: $circle-size;
+    width: $circle-size;
+    top: $circle-size*-0.5;
+    left: 50%;
+    background: $secondary-color;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: $circle-size*-0.5;
+    background-color: $secondary-color;
+    background-size: 42px auto;
+    background-repeat: no-repeat;    
+  }
+}
+
+.skill-circle {
+  background: $secondary-color;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: table;
+  margin: auto;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+
+  // content: "";
+  // height: $skill-size;
+  // width: $skill-size;
+  // left: 50%;
+  // background: $secondary-color;
+  // border-radius: 50%;
+  // position: absolute;
+  // margin-left: $skill-size*-0.5;
+  // background-color: $secondary-color;
+  // background-size: 42px auto;
+  // background-repeat: no-repeat;    
 }
 
 /* contact form */
@@ -180,21 +236,12 @@ a {
 
 /* hamburger styles */
 @import 'hamburger';
-.hamburger-inner {
-  background-color: white !important;
-  &::before {
-    background-color: white !important;
-  }
-  &::after {
-    background-color: white !important;
-  }
-}
 
 /* ekko lightbox */
 @import 'ekko-lightbox';
 .img-lightbox {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
   border: 5px solid white;
   transition: all .5s;
@@ -206,10 +253,10 @@ a {
 .linkedin {
   height: 50px;
   path {
-    fill: $marks-blue;
+    fill: $primary-color;
     transition: fill 1s;
     &:hover {
-      fill: darken($marks-blue, 5%);
+      fill: darken($primary-color, 5%);
     }
   }
 }
