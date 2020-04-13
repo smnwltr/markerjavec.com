@@ -32,19 +32,19 @@ items:
   circle: /assets/img/mark-erjavec-circle.jpg
   facts:
     -
-      text: Fact 1
-      counter: 300+
-      background: /assets/img/facts/money.png
+      text: in the finance and investment banking business 
+      counter: 25 years 
+      background: /assets/img/facts/bank.png
     -
-      text: Fact 2
-      counter: 100
-      background: /assets/img/facts/money.png
+      text: third party investment capital raised
+      counter: 500mm
+      background: /assets/img/facts/profit.png
     -
-      text: Fact 3
-      counter: 50
-      background: /assets/img/facts/money.png
+      text: continents with unique business operations
+      counter: 5
+      background: /assets/img/facts/world.png
     -
-      text: Fact 4
-      counter: 3000
-      background: /assets/img/facts/money.png
+      text: unique financial transactions as principal 
+      counter: 1000+
+      background: /assets/img/facts/contract.png
 

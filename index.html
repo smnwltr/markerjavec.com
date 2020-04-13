@@ -6,15 +6,16 @@ layout: base
 <!-- home section (top of page)-->
 {% assign home = site.data.general.items %}
 <div id="home" class="section">
-    <div class="container-fluid">
-        <!-- TODO: Insert boilerplate-->
-    </div>
+    <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image"
+        alt="{{home.heading}}">
 </div>
 
 
 <!-- facts section -->
-<div id="facts" class="container-fluid bg-light">
+<div id="facts" class="container-fluid bg-light text-center py-5">
     <div class="container text-center pt-2 pb-5">
+        <h1 class="mt-3">{{home.subheading}}</h1>
+        <p class="my-3 text-left">{{home.boilerplate}}</p>
         <div class="card-deck">
             {% for i in home.facts %}
             <div class="card fact-card mt-5">
@@ -31,28 +32,9 @@ layout: base
 </div>
 
 
-<!-- skills section -->
-<div id="about" class="bg-darkblue py-5 section">
-    <div class="container my-4 text-white text-center">
-        <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image mt-3"
-            alt="{{home.heading}}">
-        <h1 class="mt-3">{{home.subheading}}</h1>
-        <p class="my-3 text-left">{{home.boilerplate}}</p>
-        <div class="row mt-4">
-            {% for i in home.skills %}
-            <div class="col-md-2 col-sm-4 col-6 mt-4 justify-content-center">
-                <div class="skill-circle"><img src="{{i.icon |relative_url}}?{{cache_buster}}"></div>
-                <h5 class="mt-3">{{i.text}}</h3>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-
 <!-- more about mark section (professional background)-->
 {% assign about = site.data.about.items %}
-<div class="section bg-light">
+<div id="about" class="section bg-white">
     <div class="container">
         <h2 class="text-center my-4"><span class="highlighter">{{about.heading}}</span></h2>
         {% for i in about.paragraphs %}
@@ -84,7 +66,7 @@ layout: base
 {% assign portfolio = site.data.portfolio.items %}
 <div id="portfolio" class="section bg-light">
     <div class="container">
-        <h2 class="text-center mt-5"><span class="highlighter">{{portfolio.heading}}</span></h2>
+        <h2 class="text-center my-4"><span class="highlighter">{{portfolio.heading}}</span></h2>
         {% for i in portfolio.paragraphs %}
         <p class="section-intro">{{i}}</p>
         {% endfor %}
@@ -115,7 +97,7 @@ layout: base
 {% assign personal = site.data.personal.items %}
 <div id="personal" class="section">
     <div class="container">
-        <h2 class="text-center mt-5"><span class="highlighter">{{personal.heading}}</span></h2>
+        <h2 class="text-center my-4"><span class="highlighter">{{personal.heading}}</span></h2>
         {% for i in personal.paragraphs %}
         <p class="section-intro">{{i}}</p>
         {% endfor %}
@@ -163,7 +145,7 @@ layout: base
 {% assign phil = site.data.philantrophy.items %}
 <div id="philantrophy" class="section">
     <div class="container">
-        <h2 class="text-center mt-5"><span class="highlighter">{{phil.heading}}</span></h2>
+        <h2 class="text-center my-4"><span class="highlighter">{{phil.heading}}</span></h2>
         {% for i in phil.paragraphs %}
         <p class="section-intro">{{i}}</p>
         {% endfor %}
