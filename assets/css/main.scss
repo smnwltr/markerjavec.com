@@ -91,13 +91,16 @@ a {
 .navbar-scroll {
   box-shadow: 0 2px 10px 0 rgba(86, 91, 115, 0.15);
   background-color: white;
-  text-shadow: none;
+  text-shadow: none !important;
   transition: background-color .3s;
 }
 
 .navbar {
+  text-shadow: 2px 2px 4px lightgrey;
+
   @media (max-width: 820px) {
-    background-color: white;;
+    background-color: white;
+    text-shadow: none;
   }
 
 }
