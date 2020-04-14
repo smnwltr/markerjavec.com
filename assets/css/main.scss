@@ -267,6 +267,16 @@ a {
   }
 }
 
+.ekko-lightbox {
+  .modal-footer {
+    display: block !important;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
 .linkedin {
   height: 50px;
   path {

@@ -51,7 +51,9 @@ layout: base
             {% for i in about.photos %}
             <div class="col-md-3 mt-3">
                 <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                    data-gallery="event-gallery" data-title="{{i.alt}}">
+                    data-gallery="event-gallery" data-title="{{i.alt}}"
+                    {% if i.footer %}data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>"
+                    {% endif %}>
                     <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
                 </a>
             </div>
