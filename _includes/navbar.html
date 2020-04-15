@@ -2,8 +2,10 @@
 
 <nav class="navbar scrolling navbar-expand-md fixed-top">
     <a class="navbar-brand smooth-scroll" href="#top">
-        <img class="my-navbar-img scrolling-img" src="{{'/assets/img/logo-white.png' | relative_url }}?{{cache_buster}}"
-            alt="{{site.title}}">
+        <img class="my-navbar-img scrolling-img d-none d-md-block"
+            src="{{'/assets/img/logo-white.png' | relative_url }}?{{cache_buster}}" alt="{{site.title}}">
+        <img class="my-navbar-img scrolling-img d-md-none"
+            src="{{'/assets/img/logo-black.png' | relative_url }}?{{cache_buster}}" alt="{{site.title}}">
     </a>
 
     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"

@@ -7,10 +7,10 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 250) {
+        if (scroll >= 150 && $(window).width() > 739) {
             header.addClass("navbar-scroll");
             $(".scrolling-img").attr("src", "/assets/img/logo-black.png")
-        } else {
+        } else if ($(window).width() > 739) {
             header.removeClass("navbar-scroll")
             $(".scrolling-img").attr("src", "/assets/img/logo-white.png")
         }
