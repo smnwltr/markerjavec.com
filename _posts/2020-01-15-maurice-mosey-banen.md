@@ -12,7 +12,7 @@ The company traces its name to both the Mesaba Loan Company organized March 19, 
 
 ## Who wants to be a Repo Man?
 
-<img src="/assets/blog/car1.png" alt="" class="img-fluid blog-post-img" />
+<img src="/assets/blog/car1.jpg" alt="" class="img-fluid blog-post-img" />
  
 Throughout the 1980’s and early 1990’s the Mesaba Finance business plan was to lend money to consumers with shaky credit for automobile loans. This business model enables the lender to charge a higher rate of interested, while managing its risk because of its local presence and understanding of the communities that it is based in. The founder of the company, Maurice or “Mosey” as he was known about town having operated the business for decades was in his late 80’s and in declining health when we first met. I learned about him and his business reading a public interest article in the local newspaper.  Further, his family members had already retired and moved to warmer weather, therefore after decades of operating a community-based finance office, my offer to buy the company was immediately accepted.
 As part of the acquisition price I obtained several hundred automobile notes (the loans secured by automobiles) owed by individual consumers on the Iron Range.
@@ -32,7 +32,7 @@ Bob (we will call him Bob for the purposes of this story) opened the door in com
 
 Although he offered to escort me over to it, I had already done my financial calculations from where we stood on his front porch. We shook hands, I told him I would get back to him, and I walked across the street to see what I could do. I took this picture, got back in my car, and decided that this would be my first lesson in buying a distressed asset. 
 
-<img src="/assets/blog/car2.png" alt="" class="img-fluid blog-post-img" />
+<img src="/assets/blog/car2.jpg" alt="" class="img-fluid blog-post-img" />
 
 …Its possible the car is still there today, except now 25 years late it may be finally increasing in value :-)
  
