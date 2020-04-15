@@ -95,7 +95,7 @@ a {
   text-shadow: none !important;
   transition: background-color .3s;
   a {
-    color: black !important;
+    color: black;
   }
 }
 
@@ -144,7 +144,7 @@ a {
 
 .blog-btn {
   background: $secondary-color;
-  color: white !important;
+  color: white;
   border-radius: 3px;
   padding: 2px 40px!important;
   transition: 0.4s all;

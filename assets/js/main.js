@@ -3,16 +3,16 @@
 
 $(document).ready(function () {
     //caches a jQuery object containing the header element
-    var header = $(".navbar");
+    var header = $(".navbar.scrolling");
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 250) {
             header.addClass("navbar-scroll");
-            $(".my-navbar-img").attr("src", "/assets/img/logo-black.png")
+            $(".scrolling-img").attr("src", "/assets/img/logo-black.png")
         } else {
             header.removeClass("navbar-scroll")
-            $(".my-navbar-img").attr("src", "/assets/img/logo-white.png")
+            $(".scrolling-img").attr("src", "/assets/img/logo-white.png")
         }
     });
 });

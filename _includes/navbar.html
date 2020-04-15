@@ -1,8 +1,8 @@
 {% assign cache_buster = site.time | date: '%s%N' %}
 
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar scrolling navbar-expand-md fixed-top">
     <a class="navbar-brand smooth-scroll" href="#top">
-        <img class="my-navbar-img" src="{{'/assets/img/logo-white.png' | relative_url }}?{{cache_buster}}" alt="{{site.title}}">
+        <img class="my-navbar-img scrolling-img" src="{{'/assets/img/logo-white.png' | relative_url }}?{{cache_buster}}" alt="{{site.title}}">
     </a>
 
     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler hamburger hamburger--spring d-md-none text-white" data-target="#navbarNav" data-toggle="collapse" type="button">
@@ -27,7 +27,7 @@
                     Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ml-3 btn blog-btn" href="/blog/" target="_blank">Blog</a>
+                <a class="nav-link ml-3 btn blog-btn" href="/blog/" style="color: white;" target="_blank">Blog</a>
             </li>
         </ul>
     </div>
