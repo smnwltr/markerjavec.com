@@ -17,3 +17,4 @@ defaults:
     values:
       layout: blog
       permalink: /blog/:year-:month-:day-:title.html
+      published: false
