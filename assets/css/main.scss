@@ -94,6 +94,9 @@ a {
   background-color: white;
   text-shadow: none !important;
   transition: background-color .3s;
+  a {
+    color: black !important;
+  }
 }
 
 .navbar {
@@ -170,7 +173,7 @@ a {
   border: 5px solid $secondary-color;
   max-width: 250px;
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   left: 0;
   right: 0;
   margin: auto;

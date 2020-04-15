@@ -9,8 +9,10 @@ $(document).ready(function () {
 
         if (scroll >= 250) {
             header.addClass("navbar-scroll");
+            $(".my-navbar-img").attr("src", "/assets/img/logo-black.png")
         } else {
             header.removeClass("navbar-scroll")
+            $(".my-navbar-img").attr("src", "/assets/img/logo-white.png")
         }
     });
 });
