@@ -164,6 +164,16 @@ a {
   padding: 2rem;
 }
 
+.blog-img {
+  border: 5px solid $secondary-color;
+  max-width: 250px;
+}
+
+
+.blog-post-img {
+  max-height: 300px;
+}
+
 .no-deco {
     text-decoration: none;
     font-weight: normal;
@@ -203,10 +213,6 @@ a {
   margin: auto;
 }
 
-.blog-img {
-  border: 5px solid $secondary-color;
-  max-width: 250px;
-}
 
 #carouselBackgroundControls {
   height: 100%;
