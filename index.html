@@ -5,27 +5,25 @@ layout: base
 
 <!-- home section (top of page)-->
 {% assign home = site.data.general.items %}
-<div id="home" class="section">
-    <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image"
-        alt="{{home.heading}}">
+<div class="section" id="home">
+    <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image" alt="{{home.heading}}">
 </div>
 
 
 <!-- facts section -->
-<div id="facts" class="container-fluid bg-light text-center py-5">
-    <div class="container text-center pt-2 pb-5">
-        <h1 class="mt-3">{{home.subheading}}</h1>
+<div class="container-fluid bg-light text-center pt-2 pb-5" id="facts">
+    <div class="container text-center pb-5">
+        <h1 class="">{{home.subheading}}</h1>
         <p class="my-3 text-left">{{home.boilerplate}}</p>
         <div class="card-deck">
             {% for i in home.facts %}
-            <div class="card fact-card mt-5">
-                <span class="fact-circle"
-                    style="background-image: url({{i.background}});background-position: 50% 50%;"></span>
-                <div class="card-body mt-4">
-                    <h4 class="card-title">{{i.counter}}</h4>
-                    <p class="card-text">{{i.text}}</p>
+                <div class="card fact-card mt-5">
+                    <span class="fact-circle" style="background-image: url({{i.background}});background-position: 50% 50%;"></span>
+                    <div class="card-body mt-4">
+                        <h4 class="card-title">{{i.counter}}</h4>
+                        <p class="card-text">{{i.text}}</p>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -34,11 +32,13 @@ layout: base
 
 <!-- more about mark section (professional background)-->
 {% assign about = site.data.about.items %}
-<div id="about" class="section bg-white">
+<div class="section bg-white" id="about">
     <div class="container">
-        <h2 class="text-center my-4"><span class="highlighter">{{about.heading}}</span></h2>
+        <h2 class="text-center my-4">
+            <span class="highlighter">{{about.heading}}</span>
+        </h2>
         {% for i in about.paragraphs %}
-        <p class="section-intro">{{i}}</p>
+            <p class="section-intro">{{i}}</p>
         {% endfor %}
     </div>
 </div>
@@ -49,14 +49,11 @@ layout: base
         <h4 class="text-center">{{about.galleryHeading}}</h4>
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in about.photos %}
-            <div class="col-md-3 mt-3">
-                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                    data-gallery="event-gallery" data-title="{{i.alt}}"
-                    {% if i.footer %}data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>"
-                    {% endif %}>
-                    <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
-                </a>
-            </div>
+                <div class="col-md-3 mt-3">
+                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="event-gallery" data-title="{{i.alt}}" {% if i.footer %} data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>" {% endif %}>
+                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -66,42 +63,48 @@ layout: base
 
 <!-- portfolio section (business holdings and investments) -->
 {% assign portfolio = site.data.portfolio.items %}
-<div id="portfolio" class="section bg-light">
+<div class="section bg-light" id="portfolio">
     <div class="container">
-        <h2 class="text-center my-4"><span class="highlighter">{{portfolio.heading}}</span></h2>
+        <h2 class="text-center my-4">
+            <span class="highlighter">{{portfolio.heading}}</span>
+        </h2>
         {% for i in portfolio.paragraphs %}
-        <p class="section-intro">{{i}}</p>
+            <p class="section-intro">{{i}}</p>
         {% endfor %}
     </div>
 
     {% for i in portfolio.items %}
-    {% assign test = forloop.index|modulo: 2 %}
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-4 sm-6 order-xs-last align-self-center">
-                <a href="http://{{i.url}}" target="_blank" rel="noopener">
-                    <img src="{{i.img |relative_url}}?{{cache_buster}}" alt="{{i.name}}" class="img-fluid" />
-                </a>
-            </div>
+        {% assign test = forloop.index|modulo: 2 %}
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4 sm-6 order-xs-last align-self-center">
+                    <a href="http://{{i.url}}" rel="noopener" target="_blank">
+                        <img src="{{i.img |relative_url}}?{{cache_buster}}" alt="{{i.name}}" class="img-fluid"/>
+                    </a>
+                </div>
 
-            <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
-                <h3 class="mt-3">{{i.name}}</h3>
-                <p class="mt-3">{{i.desc}}</p>
-                <p><a href="http://{{i.url}}" target="_blank" rel="noopener">{{i.url}}</a></p>
+                <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
+                    <h3 class="mt-3">{{i.name}}</h3>
+                    <p class="mt-3">{{i.desc}}</p>
+                    <p>
+                        <a href="http://{{i.url}}" rel="noopener" target="_blank">{{i.url}}</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 </div>
 
 
 <!-- personal section (personal background) -->
 {% assign personal = site.data.personal.items %}
-<div id="personal" class="section">
+<div class="section" id="personal">
     <div class="container">
-        <h2 class="text-center my-4"><span class="highlighter">{{personal.heading}}</span></h2>
+        <h2 class="text-center my-4">
+            <span class="highlighter">{{personal.heading}}</span>
+        </h2>
         {% for i in personal.paragraphs %}
-        <p class="section-intro">{{i}}</p>
+            <p class="section-intro">{{i}}</p>
         {% endfor %}
     </div>
 
@@ -109,15 +112,22 @@ layout: base
         <h3 class="text-center my-4">{{personal.quotes.heading}}</h3>
         <div class="row mt-3">
             {% for i in personal.quotes.items %}
-            <div class="col-md-4 mt-3">
-                <h4 class="mb-0">{{i.heading}}</h4>
-                <p class="text-muted mt-0 mb-2">&mdash; {{i.author}}</p>
-                <div class="quote-box">
-                    <p class="fade-out"><em>{{i.content | newline_to_br}}</em></p>
+                <div class="col-md-4 mt-3">
+                    <h4 class="mb-0">{{i.heading}}</h4>
+                    <p class="text-muted mt-0 mb-2">&mdash;
+                        {{i.author}}</p>
+                    <div class="quote-box">
+                        <p class="fade-out">
+                            <em>{{i.content | newline_to_br}}</em>
+                        </p>
+                    </div>
+                    <p>
+                        <a class="read-more" href="">Read more</a>
+                    </p>
+                    <p>
+                        <a class="read-less d-none mt-1" href="">Close</a>
+                    </p>
                 </div>
-                <p><a href="" class="read-more">Read more</a></p>
-                <p><a href="" class="read-less d-none mt-1">Close</a></p>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -129,13 +139,11 @@ layout: base
         <h4 class="text-center">{{personal.galleryHeading}}</h4>
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in personal.photos %}
-            <div class="col-md-4 mt-3">
-                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                    data-gallery="personal-gallery" data-title="{{i.alt}}" data-footer="{{i.footer}}">
-                    <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox"
-                        style="height: 250px;">
-                </a>
-            </div>
+                <div class="col-md-4 mt-3">
+                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="personal-gallery" data-title="{{i.alt}}" data-footer="{{i.footer}}">
+                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox" style="height: 250px;">
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -145,14 +153,17 @@ layout: base
 
 <!-- philantrophy section -->
 {% assign phil = site.data.philantrophy.items %}
-<div id="philantrophy" class="section">
+<div class="section" id="philantrophy">
     <div class="container">
-        <h2 class="text-center my-4"><span class="highlighter">{{phil.heading}}</span></h2>
+        <h2 class="text-center my-4">
+            <span class="highlighter">{{phil.heading}}</span>
+        </h2>
         {% for i in phil.paragraphs %}
-        <p class="section-intro">{{i}}</p>
+            <p class="section-intro">{{i}}</p>
         {% endfor %}
-        <p><a href="{{'/assets/documents/Profile_brochure_KMRC_2017.pdf'|relative_url}}?{{cache_buster}}"
-                target="_blank">Download this brochure</a> for more information on Kyiv Multinational Rotary Club.</p>
+        <p>
+            <a href="{{'/assets/documents/Profile_brochure_KMRC_2017.pdf'|relative_url}}?{{cache_buster}}" target="_blank">Download this brochure</a>
+            for more information on Kyiv Multinational Rotary Club.</p>
     </div>
 </div>
 
@@ -162,12 +173,11 @@ layout: base
         <h4 class="text-center">{{phil.galleryHeading}}</h4>
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in phil.photos %}
-            <div class="col-md-4 mt-3">
-                <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox"
-                    data-gallery="philantrophy-gallery" data-title="{{i.alt}}">
-                    <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
-                </a>
-            </div>
+                <div class="col-md-4 mt-3">
+                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="philantrophy-gallery" data-title="{{i.alt}}">
+                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -175,29 +185,27 @@ layout: base
 
 
 <!-- contact section -->
-<div id="contact" class="section bg-light">
+<div class="section bg-light" id="contact">
     <div class="container text-center py-5">
-        <h2><span class="highlighter">Start a conversation</span></h2>
-        <form id="contactForm" class="mt-5" action="/index.html?contact=sent" netlify-honeypot="13018e2ca324"
-            method="POST" data-netlify="true">
+        <h2>
+            <span class="highlighter">Start a conversation</span>
+        </h2>
+        <form action="/index.html?contact=sent" class="mt-5" data-netlify="true" id="contactForm" method="POST" netlify-honeypot="13018e2ca324">
             <div class="form-group row justify-content-center">
                 <div class="col-sm-6 mb-2">
-                    <input type="email" value="" name="email" class="email form-control" id="contactFormEmail"
-                        placeholder="Email address *" required>
+                    <input class="email form-control" id="contactFormEmail" name="email" placeholder="Email address *" required type="email" value="">
                     <label class="form-hide" for="contactFormEmail">Email address</label>
                 </div>
             </div>
 
             <div class="form-group row justify-content-center">
                 <div class="col-sm-3 mb-2">
-                    <input type="text" value="" name="first_name" class="form-control" id="contactFormFirstName"
-                        placeholder="First name *" required>
+                    <input class="form-control" id="contactFormFirstName" name="first_name" placeholder="First name *" required type="text" value="">
                     <label class="form-hide" for="contactFormFirstName">First name</label>
 
                 </div>
                 <div class="col-sm-3">
-                    <input type="text" value="" name="last_name" class="form-control" id="contactFormLastName"
-                        placeholder="Last name *" required>
+                    <input class="form-control" id="contactFormLastName" name="last_name" placeholder="Last name *" required type="text" value="">
                     <label class="form-hide" for="contactFormLastName">Last name</label>
 
                 </div>
@@ -205,23 +213,21 @@ layout: base
 
             <div class="form-group row justify-content-center">
                 <div class="col-sm-6">
-                    <textarea class="form-control" name="message" id="contactFormMessage" rows="5"
-                        placeholder="Enter your message here..."></textarea>
+                    <textarea class="form-control" id="contactFormMessage" name="message" placeholder="Enter your message here..." rows="5"></textarea>
                     <label class="form-hide" for="contactFormMessage">Email address</label>
                 </div>
 
             </div>
 
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div class="form-hide" aria-hidden="true"><input type="text" name="13018e2ca324" tabindex="-1" value="">
+            <div aria-hidden="true" class="form-hide"><input name="13018e2ca324" tabindex="-1" type="text" value="">
             </div>
 
-            <div class="clear mt-4"><input type="submit" value="Send" name="send" id="send-button"
-                    class="cta-btn button">
+            <div class="clear mt-4"><input class="cta-btn button" id="send-button" name="send" type="submit" value="Send">
             </div>
         </form>
 
-        <div id="contactSuccess" class="row justify-content-center mt-5 d-none">
+        <div class="row justify-content-center mt-5 d-none" id="contactSuccess">
             <div class col-sm-6>
                 <h5>Thank you for your message. We will be in touch shortly.</h5>
             </div>

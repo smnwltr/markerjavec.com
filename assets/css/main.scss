@@ -66,6 +66,7 @@ a {
 
 /* navbar styles */
 .nav-link {
+  color: white;
   font-family: $theme-font;
   font-weight: bold;
   font-size: 125%;
@@ -96,7 +97,7 @@ a {
 }
 
 .navbar {
-  text-shadow: 2px 2px 4px lightgrey;
+  // text-shadow: 2px 2px 4px lightgrey;
 
   @media (max-width: 820px) {
     background-color: white;
@@ -169,12 +170,10 @@ a {
   border: 5px solid $secondary-color;
   max-width: 250px;
   position: absolute;
-  bottom: -125px;
+  bottom: 0;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin: auto;
 }
 
 
@@ -182,7 +181,7 @@ a {
 /* fact cards */
 
 #facts {
-  padding-top: 8rem !important;
+  padding-top: 2rem !important;
 }
 
 .fact-card {
@@ -203,33 +202,6 @@ a {
     background-size: 42px auto;
     background-repeat: no-repeat;    
   }
-}
-
-.skill-circle {
-  background: $secondary-color;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  display: table;
-  margin: auto;
-
-  img {
-    height: 100%;
-    width: auto;
-  }
-
-
-  // content: "";
-  // height: $skill-size;
-  // width: $skill-size;
-  // left: 50%;
-  // background: $secondary-color;
-  // border-radius: 50%;
-  // position: absolute;
-  // margin-left: $skill-size*-0.5;
-  // background-color: $secondary-color;
-  // background-size: 42px auto;
-  // background-repeat: no-repeat;    
 }
 
 /* contact form */
@@ -314,4 +286,10 @@ a {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
+}
+
+.text-muted {
+  a {
+    color: #6c757d!important
+  }
 }
