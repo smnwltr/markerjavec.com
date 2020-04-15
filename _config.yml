@@ -9,3 +9,11 @@ plugins:
 
 sass:
   sass_dir: assets/css/_sass
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: blog
+      permalink: /blog/:year-:month-:day-:title.html

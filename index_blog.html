@@ -1,0 +1,24 @@
+---
+layout: blog
+permalink: /blog/index.html
+id: blog
+---
+{% assign home = site.data.general.items %}
+<div class="section" id="home">
+    <img src="{{home.circle |relative_url}}?{{cache_buster}}" class="rounded-circle circle-image" alt="{{home.heading}}">
+</div>
+
+<div class="container py-5">
+    {% for i in site.posts %}
+        <div class="blog-preview">
+            <a href="{{i.url}}" class="no-deco">
+                <p class="font-weight-bold mb-0">{{i.date|date: '%B %e, %Y'}}</p>
+                <h4>{{i.title}}</h4>
+                {{i.excerpt}}
+                <p class="mt-0">
+                    <a href="{{i.url}}" class=>Read full post...</a>
+                </p>
+            </a>
+        </div>
+    {% endfor %}
+</div>

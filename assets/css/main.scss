@@ -142,6 +142,34 @@ a {
   }
 }
 
+.blog-btn {
+  background: $secondary-color;
+  color: white !important;
+  border-radius: 3px;
+  padding: 2px 40px!important;
+  transition: 0.4s all;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 whitesmoke;
+  &:hover {
+    background: darken($secondary-color, 15%)
+  }
+}
+
+.blog-preview {
+  margin-top: 2rem;
+  border: 1px solid lightgrey;
+  padding: 2rem;
+}
+
+.no-deco {
+    text-decoration: none;
+    font-weight: normal;
+    &:hover {
+      text-decoration: none;
+    }
+
+}
+
 .highlighter {
   background: linear-gradient(to bottom, transparent 65%, rgba($secondary-color, 0.80secti) 0) center center/10% 75% no-repeat;
   background-size: 100% 80% !important;
@@ -179,6 +207,10 @@ a {
   margin: auto;
 }
 
+.blog-img {
+  border: 5px solid $secondary-color;
+  max-width: 250px;
+}
 
 
 /* fact cards */
