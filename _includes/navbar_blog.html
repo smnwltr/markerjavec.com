@@ -1,7 +1,0 @@
-{% assign cache_buster = site.time | date: '%s%N' %}
-
-<nav class="navbar {% if page.id == 'blog' %}scrolling{% endif %} navbar-expand-md fixed-top" style="padding-top: 0">
-    <a class="navbar-brand" href="/blog/">
-        <img class="my-navbar-img {% if page.id == 'blog' %}scrolling-img{% endif %}" src="{% if page.id == 'blog' %}{{'/assets/img/logo-white.png' | relative_url }}{% else %}{{'/assets/img/logo-black.png' | relative_url }}{% endif %}?{{cache_buster}}" alt="{{site.title}}">
-    </a>
-</nav>
