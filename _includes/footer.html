@@ -12,13 +12,13 @@
                 {% unless forloop.first %}
                     |
                 {% endunless %}
-                <a class="px-1" href="//{{i.url}}" rel="noopener" target="_blank">{{i.url}}</a>
+                <a class="px-1" href="{{i.url}}" rel="noopener" target="_blank">{{i.url}}</a>
             {% endfor %}
         </p>
         <div class="d-sm-none">
             {% for i in site.data.portfolio.items.items %}
                 <p>
-                    <a class="px-1" href="//{{i.url}}" rel="noopener" target="_blank">{{i.url}}</a>
+                    <a class="px-1" href="{{i.url}}" rel="noopener" target="_blank">{{i.url}}</a>
                 </p>
             {% endfor %}
         </div>
@@ -26,8 +26,7 @@
             <span id="currentYear"></span>
         </p>
         <p class="mt-5 small text-muted">Icons made by
-            <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good
-                                                                Ware</a>,
+            <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>,
             <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a>,
             <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
             from
