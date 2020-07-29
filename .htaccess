@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 RewriteEngine On
 RewriteCond %{SERVER_PORT} !=443
