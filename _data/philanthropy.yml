@@ -1,5 +1,5 @@
 items:
-  heading: Philantrophy
+  heading: Philanthropy
   paragraphs:
     - >-
       I have supported a variety of civic and philanthropic causes throughout my career. 
@@ -11,26 +11,26 @@ items:
       journey with Rotary International, becoming a member of the Kyiv Multinational Club. 
       Today I am a member of the Rotary Club 31 in Denver Colorado.
 
-  galleryHeading: Philantropy    
+  galleryHeading: Philanthropy    
   photos:
     -
-      src: /assets/img/philantrophy/mark-erjavec-gora-spring-cleanup.jpg
+      src: /assets/img/philanthropy/mark-erjavec-gora-spring-cleanup.jpg
       alt: "Mark Erjavec at the Spring Cleanup in Gora, Ukraine"
     -
-      src: /assets/img/philantrophy/mark-erjavec-rotary-pin-reception.jpg
+      src: /assets/img/philanthropy/mark-erjavec-rotary-pin-reception.jpg
       alt: "Mark Erjavec receiving a Rotary Pin"
     -
       video: true
-      src: /assets/img/philantrophy/mark-erjavec-rotary-ukraine.jpg
+      src: /assets/img/philanthropy/mark-erjavec-rotary-ukraine.jpg
       url: https://www.youtube.com/watch?v=8bdIZo5kb8A&t=107
       alt: "Mark Erjavec in a special thank you video of Rotary Interact Club School 155, Kyiv, Ukraine"
     -
-      src: /assets/img/philantrophy/mark-erjavec-rotary-las-vegas-nv.jpg
+      src: /assets/img/philanthropy/mark-erjavec-rotary-las-vegas-nv.jpg
       alt: "Mark Erjavec with the Las Vegas Rotary Club, Nevada"
     -
-      src: /assets/img/philantrophy/mark-erjavec-rotary-minneapolis-mn.jpg
+      src: /assets/img/philanthropy/mark-erjavec-rotary-minneapolis-mn.jpg
       alt: "Mark Erjavec with the Minneapolis Rotary Club, Minnesota"
     -
-      src: /assets/img/philantrophy/mark-erjavec-rotary-deerfield-il.jpg
+      src: /assets/img/philanthropy/mark-erjavec-rotary-deerfield-il.jpg
       alt: "Mark Erjavec with the Deerfield Rotary Club, Illionois"
 
