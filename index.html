@@ -41,23 +41,6 @@ id: index
     </div>
 </div>
 
-<!-- event gallery -->
-<div class="section bg-darkblue py-5">
-    <div class="container">
-        <h4 class="text-center">{{about.galleryHeading}}</h4>
-        <div class="row mt-3 align-self-center mb-5 justify-content-center">
-            {% for i in about.photos %}
-                <div class="col-md-3 mt-3">
-                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="event-gallery" data-title="{{i.alt}}" {% if i.footer %} data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>" {% endif %}>
-                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-
-</div>
-
 
 <!-- portfolio section (business holdings and investments) -->
 {% assign portfolio = site.data.portfolio.items %}
@@ -91,6 +74,20 @@ id: index
             </div>
         </div>
     {% endfor %}
+</div>
+
+<div class="section bg-darkblue py-5">
+    <div class="container">
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
+            {% for i in about.photos %}
+                <div class="col-md-3 mt-3">
+                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="event-gallery" data-title="{{i.alt}}" {% if i.footer %} data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>" {% endif %}>
+                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 
@@ -186,7 +183,7 @@ id: index
 <div class="section bg-light" id="contact">
     <div class="container text-center py-5">
         <h2>
-            <span class="highlighter">Start a conversation</span>
+            <span class="highlighter">Let's Grab a Coffee</span>
         </h2>
         <form action="https://submit-form.com/4_SfbSQmwkk4BNUe5KGKd" class="mt-5" id="contactForm">
             <input name="_redirect" type="hidden" value="markerjavec.com/index.html?contact=sent">
