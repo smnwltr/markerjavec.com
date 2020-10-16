@@ -41,4 +41,13 @@ items:
       text: unique financial transactions as a principal
       counter: 1000+
       background: /assets/img/facts/contract.png
+  socialmedia:
+    -
+      name: Twitter
+      url: https://www.twitter.com/markerjavec
+      img: /assets/icon/twitter.png
+    -
+      name: LinkedIn
+      url: https://www.linkedin.com/in/markerjavec/
+      img: /assets/icon/linkedin.png
 

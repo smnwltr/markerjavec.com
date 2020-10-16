@@ -3,11 +3,11 @@
 <div class="flex-container font-weight-bold bg-darkblue my-footer text-white">
     <div class="container py-5 text-center">
         <p>
-            <a href="https://www.linkedin.com/in/markerjavec/" rel="noopener" target="_blank" title="Marc Erjavec's LinkedIn profile">
-                <img src="{{'/assets/img/linkedin_white.png'|relative_url}}" class="linkedin" alt="Marc Erjavec's LinkedIn profile">
-            </a>
+            {% for i in site.data.general.items.socialmedia %}
+                <a href="{{i.url}}" target="_blank" rel="noopener" class="mr-4"><img src="{{i.img}}" class="sm-icon" alt="Agro Fund One {{i.name}}"></a>
+            {% endfor %}
         </p>
-        <p class="d-none d-sm-block">
+        <p class="d-none d-sm-block mt-5">
             {% for i in site.data.portfolio.items.items %}
                 {% unless forloop.first %}
                     |
