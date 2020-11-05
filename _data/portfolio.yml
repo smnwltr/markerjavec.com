@@ -5,8 +5,7 @@ items:
     Mesaba Finance Company, Incorporated, the company that I first purchased in 1994, at age 18, 
     three days after graduating from Eveleth/Gilbert High school in Minnesota.
   items:
-    -
-      name: Mesaba Finance
+    - name: Mesaba Finance
       desc: >
         Mesaba Finance Company, Incorporated, through its various affiliated companies support a boutique investment 
         banking operation and we employ a professional staff to manage funds related to 
@@ -19,18 +18,16 @@ items:
         owner and sovereign nation clientele
       url: mesabafinance.com
       img: /assets/img/portfolio/mf-500.jpg
-    -
-      name: Agro Fund One
+    - name: Agro Fund One
       desc: >-
         Agro Fund One, Limited, and our subsidiaries draw from the expertise of our international 
         staff and resources from our affiliated businesses to support growth-stage companies 
         in the international agricultural sector. Projects focus on North and South America 
         and a stand-alone project in the Horn of Africa in a wide range of sectors ranging 
-        from crop inputs, logistics, processing, growing and ag tech innovations. 
+        from crop inputs, logistics, processing, growing and ag tech innovations.
       url: agrofundone.com
       img: /assets/img/portfolio/afo-500.jpg
-    -
-      name: Blue Heron Farms
+    - name: Blue Heron Farms
       desc: >-
         Blue Heron, Inc. (Golden Neva EurAsia) is a multi-national managed farm operation in Eastern Europe. Our 
         journey started in 2011 in the ancient wine-growing region of Kakheti, in the 
@@ -40,8 +37,7 @@ items:
         for sale in export markets and a specialty equipment leasing portfolio.
       url: blueheron.info
       img: /assets/img/portfolio/bh-500.jpg
-    -
-      name: Taqtyle
+    - name: Taqtyle
       desc: >-
         Taqtyle is a Denver-based real estate development group focussing on the LoHi neighborhood. LoHi features some 
         of Denver's greatest architecture, a vibrant scene of local restaurants and shops, as well as fantastic views 
@@ -49,3 +45,6 @@ items:
         community by developing vanguard real estate projects that both fit into and advance the neighborhood.
       url: taqtyle.com
       img: /assets/img/portfolio/tt-500.jpg
+    - name: Aero Fleet One
+      url: aerofleetone.com
+      footer_only: True
