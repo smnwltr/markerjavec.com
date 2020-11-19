@@ -17,18 +17,16 @@ items:
       - I say old chap. We’re you in the boat when the boat tipped over?  Of course not, you silly ass...I was in the water.
       - He offered her honor, he honored her offer - so all night long he was in her and off her.
       - One veterans day, an old WWI fighter pilot was giving a talk to an elementary school class about the war. He started telling them about a huge dog fight where the pilot and his wingman battled it out with a group of German fighters.
-        "We were flying along and suddenly we were being attacked. Them Folkers were coming at us out of the Sun, and there were more Folkers than I'd ever seen. Planes were zipping by us... we were shooting, they were shooting....
-        When a couple of the children giggled, the teacher quickly interrupted to explain to the class that "Folkers were a type of German airplane".
-        The WWI veteran paused and thought a bit thinking about this, and then said ... “ Yea, but them Folkers ... they were flying Messerschmitts..."
+        <br>"We were flying along and suddenly we were being attacked. Them Fokkers were coming at us out of the Sun, and there were more Fokkers than I'd ever seen. Planes were zipping by us... we were shooting, they were shooting....
+        <br>When a couple of the children giggled, the teacher quickly interrupted to explain to the class that "Fokkers were a type of German airplane".
+        <br>The WWI veteran paused and thought a bit thinking about this, and then said ... “ Yea, but them Fokkers ... they were flying Messerschmitts..."
 
- 
   quotes:
     heading: Inspirational Poems and Speeches
     items:
-      -
-        heading: Horatius at the Bridge
+      - heading: Horatius at the Bridge
         author: Lord Thomas Babington Macaulay
-        comment: >- 
+        comment: >-
           I appreciate how this poem longs for the eternal quest to develop people whom will 
           stand beside us and be loyal.
         content: |
@@ -41,13 +39,12 @@ items:
           I would, with but two beside me, will hold the foe in play.
           On yon narrow span 1,000 might well be stopped by three.
           Now, who will stand on either hand and guard the bridge with me?
-      -
-        heading: Indecision
+      - heading: Indecision
         author: Ted Turner
         comment: >-
-                This poem relates to harnessing opportunity when it arrives to you through 
-                chance, through luck, or through having earned it.  The difference between 
-                success and failure is how we handle that opportunity.
+          This poem relates to harnessing opportunity when it arrives to you through 
+          chance, through luck, or through having earned it.  The difference between 
+          success and failure is how we handle that opportunity.
         content: |
           While great Caesar lay yet dying
           Brutus has a chance for glory  
@@ -73,10 +70,9 @@ items:
           Like as not the chance appears
           But because of indecision
           Man’s fond hopes are drown in tears.
-      -
-        heading: Man in the Arena
+      - heading: Man in the Arena
         author: Thedore Roosevelt
-        comment: 
+        comment:
         content: |
           It is not the critic who counts; 
           not the man who points out how the strong man stumbles, 
@@ -92,25 +88,22 @@ items:
           and who at the worst, if he fails, at least fails while daring greatly, 
           so that his place shall never be with those cold and 
           timid souls who neither know victory nor defeat.
-          
+
   galleryHeading: "Favorite Paintings"
   photos:
-    - 
-      src: /assets/img/personal/renoir.jpg
+    - src: /assets/img/personal/renoir.jpg
       alt: "Renoir 1880 (1881) housed at the Phillips Collection in Washington D.C."
       footer: >-
         As an avid entertainer I favor the representation of the friends enjoying a 
         lunch on a summer evening. I have lunches at the restaurant at the very patio 
         depicted in the painting in several occasions. My eye is drawn to the girl with 
         her small dog. I often imagine myself among the guests.
-    - 
-      src: /assets/img/personal/repin.jpg
+    - src: /assets/img/personal/repin.jpg
       alt: "Repin 1880 (1891) housed at the Russian State Museum Saint Petersburg"
       footer: >-
         The scene is especially attractive to me as it represents the defiance of a 
         suppressed people toward their arrogant overlord.
-    - 
-      src: /assets/img/personal/hopper.jpg
+    - src: /assets/img/personal/hopper.jpg
       alt: "Hopper 1942 housed at the Chicago Art Institute"
       footer: >-
         The painting is personal to me in my frequent visits to it in that it represents 
