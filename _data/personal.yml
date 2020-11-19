@@ -9,6 +9,19 @@ items:
       gallery of my favorite paintings, from both American and Russian painters, 
       which I have viewed in person frequently. The gallery contains 
       additional commentary for each painting.
+
+  jokes:
+    title: "Mark's Favorite Jokes"
+    items:
+      - What do you call a doctor who graduated at the bottom of his class?    A doctor.
+      - I say old chap. We’re you in the boat when the boat tipped over?  Of course not, you silly ass...I was in the water.
+      - He offered her honor, he honored her offer - so all night long he was in her and off her.
+      - One veterans day, an old WWI fighter pilot was giving a talk to an elementary school class about the war. He started telling them about a huge dog fight where the pilot and his wingman battled it out with a group of German fighters.
+        "We were flying along and suddenly we were being attacked. Them Folkers were coming at us out of the Sun, and there were more Folkers than I'd ever seen. Planes were zipping by us... we were shooting, they were shooting....
+        When a couple of the children giggled, the teacher quickly interrupted to explain to the class that "Folkers were a type of German airplane".
+        The WWI veteran paused and thought a bit thinking about this, and then said ... “ Yea, but them Folkers ... they were flying Messerschmitts..."
+
+ 
   quotes:
     heading: Inspirational Poems and Speeches
     items:

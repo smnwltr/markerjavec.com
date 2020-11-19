@@ -190,6 +190,25 @@ a {
   font-family: $theme-font;
 }
 
+.btn-primary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &:active {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 
 /* home section */
 
