@@ -88,6 +88,21 @@ items:
           and who at the worst, if he fails, at least fails while daring greatly, 
           so that his place shall never be with those cold and 
           timid souls who neither know victory nor defeat.
+  films:
+    heading: Favorite Movies
+    items:
+      - name: The Shawshank Redemption
+        year: 1994
+        director: Frank Darabont
+        url: https://www.imdb.com/title/tt0111161/
+      - name: Schindler's List
+        year: 1993
+        director: Steven Spielberg
+        url: https://www.imdb.com/title/tt0108052/
+      - name: A Face in the Crowd
+        year: 1957
+        director: Elia Kazan
+        url: https://www.imdb.com/title/tt0050371/
 
   galleryHeading: "Favorite Paintings"
   photos:
