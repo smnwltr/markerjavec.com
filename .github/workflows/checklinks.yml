@@ -1,0 +1,40 @@
+name: CheckLinks
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  checklinks:
+    name: Linux
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Setup Rubygems, Bundler, jekyll
+        run: |
+          gem update --system --no-document
+          gem update bundler --no-document
+          gem install jekyll bundler
+          bundle install
+      - name: Build jekyll website with drafts
+        run: bundle exec jekyll build
+      - name: Check for broken links
+        run: |
+          bundle exec htmlproofer --log-level :debug --http-status-ignore "999" ./_site &> links.log
+        continue-on-error: true
+      - name: Archive log links
+        uses: actions/upload-artifact@v1
+        with:
+          name: links-check.log
+          path: links.log
