@@ -1,3 +1,5 @@
+{% unless page.url contains "404" %}
+
 {% assign cache_buster = site.time | date: '%s%N' %}
 
 <nav class="navbar scrolling navbar-expand-md fixed-top">
@@ -39,3 +41,5 @@
         </ul>
     </div>
 </nav>
+
+{% endunless %}
