@@ -2,6 +2,7 @@
 layout: base
 id: index
 ---
+
 {% assign cache_buster = site.time | date: '%s%N' %}
 
 <!-- home section (top of page)-->
@@ -15,18 +16,20 @@ id: index
         <p class="my-3 text-left">{{home.boilerplate}}</p>
         <div class="card-deck">
             {% for i in home.facts %}
-                <div class="card fact-card mt-5">
-                    <span class="fact-circle" style="background-image: url({{i.background}});background-position: 50% 50%;"></span>
-                    <div class="card-body mt-4">
-                        <h4 class="card-title">{{i.counter}}</h4>
-                        <p class="card-text">{{i.text}}</p>
-                    </div>
+            <div class="card fact-card mt-5">
+                <span
+                    class="fact-circle"
+                    style="background-image: url({{i.background}});background-position: 50% 50%;"
+                ></span>
+                <div class="card-body mt-4">
+                    <h4 class="card-title">{{i.counter}}</h4>
+                    <p class="card-text">{{i.text}}</p>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
 </div>
-
 
 <!-- more about mark section (professional background)-->
 {% assign about = site.data.about.items %}
@@ -36,11 +39,41 @@ id: index
             <span class="highlighter">{{about.heading}}</span>
         </h2>
         {% for i in about.paragraphs %}
-            <p class="section-intro">{{i}}</p>
+        <p class="section-intro">{{i}}</p>
         {% endfor %}
     </div>
 </div>
 
+<div class="section bg-darkblue py-5">
+    <div class="container">
+        <div class="row mt-3 align-self-center mb-5 justify-content-center">
+            {% for i in about.photos %}
+            <div class="col-md-3 mt-3">
+                <a
+                    href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}"
+                    data-toggle="lightbox"
+                    data-gallery="event-gallery"
+                    data-title="{{i.alt}}"
+                    {%
+                    if
+                    i.footer
+                    %}
+                    data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>"
+                    {%
+                    endif
+                    %}
+                >
+                    <img
+                        src="{{i.src |relative_url}}?{{cache_buster}}"
+                        alt="{{i.alt}}"
+                        class="img-fluid img-lightbox"
+                    />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 <!-- portfolio section (business holdings and investments) -->
 {% assign portfolio = site.data.portfolio.items %}
@@ -50,48 +83,68 @@ id: index
             <span class="highlighter">{{portfolio.heading}}</span>
         </h2>
         {% for i in portfolio.paragraphs %}
-            <p class="section-intro">{{i}}</p>
+        <p class="section-intro">{{i}}</p>
         {% endfor %}
     </div>
 
-    {% for i in portfolio.items %}
-        {% unless i.footer_only %}
-            {% assign test = forloop.index|modulo: 2 %}
-            <div class="container">
-                <div class="row mt-5">
-                    <div class="col-md-4 sm-6 order-xs-last align-self-center">
-                        <a href="http://{{i.url}}" rel="noopener">
-                            <img src="{{i.img |relative_url}}?{{cache_buster}}" alt="{{i.name}}" class="img-fluid"/>
-                        </a>
-                    </div>
-
-                    <div class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}">
-                        <h3 class="mt-3">{{i.name}}</h3>
-                        <p class="mt-3">{{i.desc}}</p>
-                        <p>
-                            <a href="http://{{i.url}}" rel="noopener">{{i.url}}</a>
-                        </p>
-                    </div>
-                </div>
+    {% for i in portfolio.items %} {% unless i.footer_only %} {% assign test =
+    forloop.index|modulo: 2 %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 sm-6 order-xs-last align-self-center">
+                <a href="http://{{i.url}}" rel="noopener">
+                    <img
+                        src="{{i.img |relative_url}}?{{cache_buster}}"
+                        alt="{{i.name}}"
+                        class="img-fluid"
+                    />
+                </a>
             </div>
-        {% endunless %}
-    {% endfor %}
+
+            <div
+                class="col-md-8 sm-6 align-self-center {% if test == 0 %}order-sm-first{% endif %}"
+            >
+                <h3 class="mt-3">{{i.name}}</h3>
+                <p class="mt-3">{{i.desc}}</p>
+                <p>
+                    <a href="http://{{i.url}}" rel="noopener">{{i.url}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endunless %} {% endfor %}
 </div>
 
 <div class="section bg-darkblue py-5">
     <div class="container">
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in about.photos %}
-                <div class="col-md-3 mt-3">
-                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="event-gallery" data-title="{{i.alt}}" {% if i.footer %} data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>" {% endif %}>
-                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
-                    </a>
-                </div>
+            <div class="col-md-3 mt-3">
+                <a
+                    href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}"
+                    data-toggle="lightbox"
+                    data-gallery="event-gallery"
+                    data-title="{{i.alt}}"
+                    {%
+                    if
+                    i.footer
+                    %}
+                    data-footer="<p><a href='{{i.footer}}' target='_blank'>{% if i.text %}{{i.text}}{% else %}{{i.footer}}{% endif %}</a></p>"
+                    {%
+                    endif
+                    %}
+                >
+                    <img
+                        src="{{i.src |relative_url}}?{{cache_buster}}"
+                        alt="{{i.alt}}"
+                        class="img-fluid img-lightbox"
+                    />
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>
 </div>
-
 
 <!-- personal section (personal background) -->
 {% assign personal = site.data.personal.items %}
@@ -101,32 +154,57 @@ id: index
             <span class="highlighter">{{personal.heading}}</span>
         </h2>
         {% for i in personal.paragraphs %}
-            <p class="section-intro">{{i}}</p>
+        <p class="section-intro">{{i}}</p>
         {% endfor %}
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jokeModal">
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#jokeModal"
+        >
             {{personal.jokes.title}}
         </button>
         <!-- Modal -->
-        <div class="modal fade" id="jokeModal" tabindex="-1" role="dialog" aria-labelledby="jokeModalTitle" aria-hidden="true">
+        <div
+            class="modal fade"
+            id="jokeModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="jokeModalTitle"
+            aria-hidden="true"
+        >
             <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="jokeModalTitle">{{personal.jokes.title}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    {% for i in personal.jokes.items %}
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="jokeModalTitle">
+                            {{personal.jokes.title}}
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {% for i in personal.jokes.items %}
                         <p>{{i}}</p>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
             </div>
         </div>
     </div>
@@ -135,22 +213,21 @@ id: index
         <h3 class="text-center my-4">{{personal.quotes.heading}}</h3>
         <div class="row mt-3">
             {% for i in personal.quotes.items %}
-                <div class="col-md-4 mt-3">
-                    <h4 class="mb-0">{{i.heading}}</h4>
-                    <p class="text-muted mt-0 mb-2">&mdash;
-                        {{i.author}}</p>
-                    <div class="quote-box">
-                        <p class="fade-out">
-                            <em>{{i.content | newline_to_br}}</em>
-                        </p>
-                    </div>
-                    <p>
-                        <a class="read-more" href="">Read more</a>
-                    </p>
-                    <p>
-                        <a class="read-less d-none mt-1" href="">Close</a>
+            <div class="col-md-4 mt-3">
+                <h4 class="mb-0">{{i.heading}}</h4>
+                <p class="text-muted mt-0 mb-2">&mdash; {{i.author}}</p>
+                <div class="quote-box">
+                    <p class="fade-out">
+                        <em>{{i.content | newline_to_br}}</em>
                     </p>
                 </div>
+                <p>
+                    <a class="read-more" href="">Read more</a>
+                </p>
+                <p>
+                    <a class="read-less d-none mt-1" href="">Close</a>
+                </p>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -159,16 +236,15 @@ id: index
         <h3 class="text-center my-4">{{personal.films.heading}}</h3>
         <div class="row justify-content-center">
             {% for i in personal.films.items %}
-                <div class="col-sm-4 mt-3">
-                    <h4 class="mb-1">{{i.name}}</h4>
-                    <p class="mb-1">{{i.year}}</p>
-                    <p><i>by {{i.director}}</i></p>
-                    <p><a href="{{i.url}}">More on IMDB.com</a></p>
-                </div>
+            <div class="col-sm-4 mt-3">
+                <h4 class="mb-1">{{i.name}}</h4>
+                <p class="mb-1">{{i.year}}</p>
+                <p><i>by {{i.director}}</i></p>
+                <p><a href="{{i.url}}">More on IMDB.com</a></p>
+            </div>
             {% endfor %}
         </div>
     </div>
-
 </div>
 
 <!-- personal gallery -->
@@ -177,17 +253,26 @@ id: index
         <h4 class="text-center">{{personal.galleryHeading}}</h4>
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in personal.photos %}
-                <div class="col-md-4 mt-3">
-                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="personal-gallery" data-title="{{i.alt}}" data-footer="{{i.footer}}">
-                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox" style="height: 250px;">
-                    </a>
-                </div>
+            <div class="col-md-4 mt-3">
+                <a
+                    href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}"
+                    data-toggle="lightbox"
+                    data-gallery="personal-gallery"
+                    data-title="{{i.alt}}"
+                    data-footer="{{i.footer}}"
+                >
+                    <img
+                        src="{{i.src |relative_url}}?{{cache_buster}}"
+                        alt="{{i.alt}}"
+                        class="img-fluid img-lightbox"
+                        style="height: 250px"
+                    />
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>
-
 </div>
-
 
 <!-- philanthropy section -->
 {% assign phil = site.data.philanthropy.items %}
@@ -197,11 +282,16 @@ id: index
             <span class="highlighter">{{phil.heading}}</span>
         </h2>
         {% for i in phil.paragraphs %}
-            <p class="section-intro">{{i}}</p>
+        <p class="section-intro">{{i}}</p>
         {% endfor %}
         <p>
-            <a href="{{'/assets/documents/Profile_brochure_KMRC_2017.pdf'|relative_url}}?{{cache_buster}}">Download this brochure</a>
-            for more information on Kyiv Multinational Rotary Club.</p>
+            <a
+                href="{{'/assets/documents/Profile_brochure_KMRC_2017.pdf'|relative_url}}?{{cache_buster}}"
+            >
+                Download this brochure
+            </a>
+            for more information on Kyiv Multinational Rotary Club.
+        </p>
     </div>
 </div>
 
@@ -211,16 +301,24 @@ id: index
         <h4 class="text-center">{{phil.galleryHeading}}</h4>
         <div class="row mt-3 align-self-center mb-5 justify-content-center">
             {% for i in phil.photos %}
-                <div class="col-md-4 mt-3">
-                    <a href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}" data-toggle="lightbox" data-gallery="philanthropy-gallery" data-title="{{i.alt}}">
-                        <img src="{{i.src |relative_url}}?{{cache_buster}}" alt="{{i.alt}}" class="img-fluid img-lightbox">
-                    </a>
-                </div>
+            <div class="col-md-4 mt-3">
+                <a
+                    href="{% if i.video %}{{i.url}}{% else %}{{i.src}}{% endif %}"
+                    data-toggle="lightbox"
+                    data-gallery="philanthropy-gallery"
+                    data-title="{{i.alt}}"
+                >
+                    <img
+                        src="{{i.src |relative_url}}?{{cache_buster}}"
+                        alt="{{i.alt}}"
+                        class="img-fluid img-lightbox"
+                    />
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>
 </div>
-
 
 <!-- contact section -->
 <div class="section bg-light" id="contact">
@@ -230,32 +328,44 @@ id: index
         </h2>
         <div class="row justify-content-center" id="contactForm">
             <div class="col-sm-6 mt-5">
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+                <script
+                    charset="utf-8"
+                    type="text/javascript"
+                    src="//js.hsforms.net/forms/shell.js"
+                ></script>
                 <script>
-                  hbspt.forms.create({
-                    portalId: "8154313",
-                    formId: "0f2c095d-0545-4e46-bead-cf65fdbb5c3b"
-                });
+                    hbspt.forms.create({
+                        portalId: "8154313",
+                        formId: "0f2c095d-0545-4e46-bead-cf65fdbb5c3b",
+                    });
                 </script>
             </div>
         </div>
 
         <div class="row justify-content-center mt-5 d-none" id="contactSuccess">
             <div class col-sm-6>
-                <h5>Thank you for your message. We will be in touch shortly.</h5>
+                <h5>
+                    Thank you for your message. We will be in touch shortly.
+                </h5>
             </div>
         </div>
 
         <div class="mt-5">
             <h3>
-                <span class="highlighter">... or directly schedule a short call below!</span>
+                <span class="highlighter">
+                    ... or directly schedule a short call below!
+                </span>
             </h3>
             <!-- Start of Meetings Embed Script -->
-            <div class="mt-4 meetings-iframe-container" data-src="https://meetings.hubspot.com/mark1329?embed=true"></div>
-            <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+            <div
+                class="mt-4 meetings-iframe-container"
+                data-src="https://meetings.hubspot.com/mark1329?embed=true"
+            ></div>
+            <script
+                type="text/javascript"
+                src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+            ></script>
             <!-- End of Meetings Embed Script -->
         </div>
-        
     </div>
-
 </div>
